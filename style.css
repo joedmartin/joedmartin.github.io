@@ -184,6 +184,7 @@ table.weatherTable {
 	left: 20px;
 	width: 87%;
 	visibility: hidden;
+	display: none;
 }
 
 #vineDiv {
@@ -194,6 +195,7 @@ table.weatherTable {
 	border-radius: 20px;
 	max-width: 30%;
 	visibility: hidden;
+	display: none;
 }
 
 #vines {
