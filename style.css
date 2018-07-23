@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,900|Raleway:700');
+
+body { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	overflow: hidden; 
+}
+
+h1 {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 50px;
+	margin: 0;
+	visibility: hidden;
+	left: 100px;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: visible;
+	white-space: nowrap;
+}
+
+div.left {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	height: 100%;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+}
+
+div.right {
+	position: absolute;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	left:50%;
+	width: 50%;
+	padding-right: 17px;
+	height: 100%;
+}
+
+div.container {
+	position: absolute;
+	width: 90%;
+	left: 7%;
+	top: 5%;
+}
+
+div.cell {
+	visibility: hidden;
+	position: relative;
+	min-height: 100%;
+	height: 75px;
+	border: 1.5px solid rgba(22,22,22,.4);
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .2);
+	background: rgba(250,250,250, .6);
+	left:50px;
+}
+
+p.inner {
+	position: absolute;
+	right: 15%;
+	left: 30%;
+	white-space: nowrap;
+	overflow: visible;
+	padding: 15px;
+	line-height: 43px;
+	color: #000;
+	text-decoration: none;
+}
+
+img.fav {
+	position: absolute;
+	width: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10%;
+}
+
+table.bookmarktable {
+	position: relative;
+	border-spacing: 25px;
+	margin-bottom: 20px;
+	width: 100%;
+	left: -20px;
+}
+
+td.bookmarkentry {
+	width: 33%;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+div.cell:hover {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+table.weatherTable {
+	background: rgba(0,0,0,.5);
+	border-radius: 20px;
+}
+
+.weatherTableTitle {
+	font-size: 40px;
+	color: white;
+	font-family: Montserrat, sans-serif;
+	font-weight: 90;
+}
+
+.weatherTableDate {
+	font-size: 15px;
+	color: white;
+	font-family: Montserrat, sans-serif;
+	font-weight: 70;
+	width: 200px;
+	text-align: left;
+}
+
+.weatherTableicon {
+	color: white;
+	white-space: pre-wrap;
+	font-size: 25px;
+	text-align: center;
+}
+
+.weatherTableHighLow {
+	color: white;
+	font-family: Montserrat, sans-serif;
+	white-space: pre-wrap;
+	font-size: 15px;
+	text-align: left;
+}
+
+.weatherTableDescription {
+	color: white;
+	font-family: Montserrat, sans-serif;
+	white-space: pre-wrap;
+	font-size: 17px;
+	text-align: center;
+}
+
+.weatherTableTime {
+	font-size: 30px;
+	text-align: left;
+	color: white;
+	font-family: Montserrat, sans-serif;
+	font-weight: 10;
+	width: 200px;
+}
+
+.weatherTableTemp {
+	color: white;
+	font-family: Montserrat, sans-serif;
+	white-space: pre-wrap;
+	font-size: 55px;
+	text-align: left;
+	line-height: 95%;
+}
+
+.weatherTableOther {
+	color: white;
+	font-family: Montserrat, sans-serif;
+	white-space: pre-wrap;
+	font-size: 15px;
+	text-align: left;
+}
+
+#image {
+	position: relative;
+	text-align: center;
+	margin: auto;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+#weatherDiv {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 87%
+}
+
+#vineDiv {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background: rgba(0,0,0,.5);
+	border-radius: 20px;
+	max-width: 30%;
+}
+
+#vines {
+	color: white;
+	font-family: Montserrat, sans-serif;
+	white-space: pre-wrap;
+	font-size: 15px;
+	margin: 10;
+}
+
+#weatherIcon {
+	height: 150px;
+	width: 150px;
+}
+
+#gradient {
+	opacity: 0.2;
+}
+
+#welcome1 {
+	position: absolute;
+	font-size: 100px;
+	font-family: Montserrat, sans-serif;
+	font-weight: 900;
+	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.85);
+	text-align: right;
+	color: white;
+	top: 2%;
+	bottom: 90%;
+	right: 200px;
+	visibility: hidden;
+}
+
+#welcome2 {
+	position: relative;
+	margin-top: 20px;
+	font-size: 35px;
+	font-family: Raleway, sans-serif;
+	font-weight: 400;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+	text-align: right;
+	color: white;
+	right:100px;
+	visibility: hidden;
+}
