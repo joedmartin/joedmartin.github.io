@@ -212,9 +212,9 @@ var vines = [
 ];
 
 // Selects a random number within the range (1-NUM_VINES) to be set as the vine. If it is wednesday, it is wednesday my dudes.
-//var dateThree = new Date();
-//if (dateThree.getDay() == 3) {document.getElementById("vines").innerHTML = 'it is wednesday my dudes. aaaaahhhhhhhhhhhhhhhhhhhhh';}
-//else {document.getElementById("vines").innerHTML = vines[(Math.floor(Math.random()*vines.length))];}
+var dateThree = new Date();
+if (dateThree.getDay() == 3) {document.getElementById("vines").innerHTML = 'it is wednesday my dudes. aaaaahhhhhhhhhhhhhhhhhhhhh';}
+else {document.getElementById("vines").innerHTML = vines[(Math.floor(Math.random()*vines.length))];}
 
 // Function for grabbing the specific div.cell element (that needs to be animated, in this case)
 // in a given table, at index x, y (from the top left).
