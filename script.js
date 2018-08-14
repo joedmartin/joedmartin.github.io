@@ -16,14 +16,14 @@ function fetchWeather(){
 			type: "GET",
 			url : URL,
 			dataType : "jsonp",
-			success : function(msg){			
+			success : function(msg){
 				// Get the city name from the weather object and display it.
 				document.getElementById("cityname").innerHTML = msg.name;
 				// Get the weather description from the weather object and fix case by capitalizing each word with the "toTitleCase()" function.
 				document.getElementById("conditions").innerHTML = toTitleCase(msg.weather[0].description);
 				// Get the current temperature from the weather object, round to the nearest degree, and add on the "degree F" part.
 				document.getElementById("temperature").innerHTML = Math.round(msg.main.temp) + "&#xb0;F</tr></td>";
-				
+
 				// Get the sunrise and sunset times from the weather object and convert from unix epoch time to normal human time using date objects.
 				var sunrise = new Date(msg.sys.sunrise * 1000);
 				var sunset = new Date(msg.sys.sunset * 1000);
@@ -31,7 +31,7 @@ function fetchWeather(){
 				document.getElementById("temperaturedetails").innerHTML = "Sunrise: " + getTime(sunrise.getHours(), sunrise.getMinutes().toString()) + "<br>" + "Sunset: " + getTime(sunset.getHours(), sunset.getMinutes().toString()) + "<br>Humidity: " + msg.main.humidity + "%";
 				// Get the high and low temperatures from the weather object, add on the "degree F" part, and display them.
 				document.getElementById("highlow").innerHTML = "Hi: " + Math.round(msg.main.temp_max) + "&#xb0;F</tr></td><br>" + "Lo: " + Math.round(msg.main.temp_min) + "&#xb0;F</tr></td>";
-				
+
 				// Create a new date object.
 				var dateOne = new Date();
 				// Create a new variable to store the current time with the 3 last digits cut off cause idk what they do...but it works.
@@ -54,6 +54,8 @@ function fetchWeather(){
 				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
 				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.images['weatherIcon'].src = 'images/Clouds.png';}
 				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.images['weatherIcon'].src = 'images/Clouds_Night.png';}
+				else if (msg.weather[0].main == "Mist" && isDay == true) {document.images['weatherIcon'].src = 'images/Drizzle.png';}
+				else if (msg.weather[0].main == "Mist" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
 				else if (msg.weather[0].main == "Snow") {document.images['weatherIcon'].src = 'images/Snow.png';}
 				else {document.images['weatherIcon'].src = 'images/Blank.png';}
 			}
@@ -71,7 +73,7 @@ function updateTimeAndDate() {
 	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	// Sets the date by getting the literal day of the week, month, numeric date, and year from the date object.
 	// *Note: The function "ordinalSuffix()" is used on the numeric date to add the correct suffix (nd, st, rd).
-	document.getElementById("day").innerHTML = days[dateTwo.getDay()] + ", " + months[dateTwo.getMonth()] + " " + ordinalSuffix(dateTwo.getDate()) + ", " + dateTwo.getFullYear(); 
+	document.getElementById("day").innerHTML = days[dateTwo.getDay()] + ", " + months[dateTwo.getMonth()] + " " + ordinalSuffix(dateTwo.getDate()) + ", " + dateTwo.getFullYear();
 	// Get the current time in hours and minutes from the date object. The "getTime()" function converts from 24 to 12 hour format as well as adds the AM/PM suffixes.
 	document.getElementById("time").innerHTML = getTime(dateTwo.getHours(), dateTwo.getMinutes().toString());
 	// Sets a timeout so that the function will be called and the time/date updated every second.
