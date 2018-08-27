@@ -1,5 +1,4 @@
 const NUM_PICTURES = 234; // The number of pictures in the images folder.
-const NUM_VINES = 74; // The number of vines to be selected from.
 const USER_NAME = "Joe"; // The name you want to display. Most likely yours!
 const CITY_ZIPCODE = "19104"; // The zipcode you want to have the weather displayed for.
 
@@ -54,6 +53,8 @@ function fetchWeather(){
 				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
 				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.images['weatherIcon'].src = 'images/Clouds.png';}
 				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.images['weatherIcon'].src = 'images/Clouds_Night.png';}
+				else if (msg.weather[0].main == "Haze" && isDay == true) {document.images['weatherIcon'].src = 'images/Clouds.png';}
+				else if (msg.weather[0].main == "Haze" && isDay == false) {document.images['weatherIcon'].src = 'images/Clouds_Night.png';}
 				else if (msg.weather[0].main == "Mist" && isDay == true) {document.images['weatherIcon'].src = 'images/Drizzle.png';}
 				else if (msg.weather[0].main == "Mist" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
 				else if (msg.weather[0].main == "Snow") {document.images['weatherIcon'].src = 'images/Snow.png';}
@@ -136,87 +137,6 @@ var phrases = [
 	['What\'s cracking', 'my man?']
 	['Whoever threw', 'that paper...']
 ];
-
-var vines = [
-['i thought you were bae, turns out you\'re just fam'],
-['ahhhh stop i coulda dropped my croissant'],
-['happy christhums, it\'s chrismah, merry chrisis, merry chrysler'],
-['hurricane katrina? more like hurricane tortilla'],
-['iridocyclitis'],
-['this b*tch empty...yeeeeeet'],
-['get to del taco, they got a new thing, called freesha- freeshavacado'],
-['it\'s an avocado, thankssss'],
-['wwwooooowwww'],
-['you\'re not my dad. you always want to hear something, ugly a$$ f*ckin noodle head'],
-['mother trucker dude, that hurt like a buttcheek on a stick'],
-['whoever threw that paper, you mom\'s a hoe'],
-['what are thoooose?'],
-['i can\'t believe you\'ve done this'],
-['i can\'t stop crying'],
-['look at all those chickens'],
-['hi, welcome to chili\'s'],
-['pepsi bottle, coca-cola glass, i don\'t give a damn'],
-['i wanna be a cowboy baby'],
-['i thought you were american..??'],
-['miss keisha? miss keisha? miss keisha? omfg she f*ckin ded'],
-['mans not hot'],
-['never hot'],
-['she said take off the jacket, i said babes, mans not hot'],
-['i\'m in me mum\'s car, vroom vroom'],
-['get out me car, awwww'],
-['a potato flew around my room b4 you came, excuse the mess it made'],
-['when will u learn??'],
-['hi my name is trey i have a basketball game tomorrow where i\'m a point guard and i got shoe game and-'],
-['can i get a hoi ya'],
-['have you ever had a dream that you, um, you had, your, you- you could, you\'ll do, you- you wants, you, you could do so, you- you\'ll do, you could- you, you want, you want them to do you so much you could do anything?'],
-['daddy? do i look like?'],
-['i\'m like a nacho, salty, cheesy, and amazing'],
-['i don\'t have a case of the mondays, i have a case of the every days'],
-['i\'m not just extra, i\'m extra extra read all about it'],
-['look it. look it. it\'s freaking bats. i love halloween'],
-['there is no \"i\" in team, but you know where there is one, pizza'],
-['i\'m coming for you, pizza!'],
-['monday is for lame-trons'],
-['YOU\'RE WINNING! YOU\'RE WINNING AT LIFE, YOU\'RE WINNING!'],
-['i smell like beef. i smell life beef. i smell like beef.'],
-['i\'m cravin some sush'],
-['hello friend? hello friend? friend? friend? friend?'],
-['i\'m washing me and my clothes b*tch. i\'m washing me and my clothes.'],
-['he need some milk'],
-['that was legitness'],
-['so you just gonna bring me a birthday gift on my birthday to my birthday party on my birthday with a birthday gift?'],
-['i gotta go home cause i forgot to vacuum my room. i\'ll be back.'],
-['when they ask you how you are and you just have to say that you\'re fine when you\'re not really fine'],
-['and they were roommates. oh my god they were roommates.'],
-['freakin\' google it'],
-['happy birthday raven! i can\'t swim.'],
-['f*ck ya chicken strips'],
-['oh my god. oh my god. he on x games.'],
-['on all levels except physical, i am a wolf. arf.'],
-['omg i love chipotle. chipotle is my life.'],
-['um i never went to oovoo javer'],
-['hello?'],
-['.............ok'],
-['dad look it\'s the good kush. this is the dollar store, how good can it be?'],
-['guess what i\'m eating. popcoooooorn.'],
-['can i get a waffle? can i please get a waffle?'],
-['i don\'t need friends, they disappoint me'],
-['you stupid. no i not. what\'s 9+10. 21. you stupid.'],
-['achoo. nice ron. i sneezed. i\'m not allowed to sneeze?'],
-['lebron james. lebron james. lebron james. lebron james. lebron james.'],
-['look at this graphhh'],
-['does it feel good? ah.'],
-['who am i? let\'s go to the beach beach...ninki minjaj'],
-['deez nuts. hah. got em.'],
-['adam'],
-['mah d*ck fell off'],
-['ahaha ey, its your boi, uhh skinny p*nis']
-];
-
-// Selects a random number within the range (1-NUM_VINES) to be set as the vine. If it is wednesday, it is wednesday my dudes.
-var dateThree = new Date();
-if (dateThree.getDay() == 3) {document.getElementById("vines").innerHTML = 'it is wednesday my dudes. aaaaahhhhhhhhhhhhhhhhhhhhh';}
-else {document.getElementById("vines").innerHTML = vines[(Math.floor(Math.random()*vines.length))];}
 
 // Function for grabbing the specific div.cell element (that needs to be animated, in this case)
 // in a given table, at index x, y (from the top left).
