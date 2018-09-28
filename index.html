@@ -3,6 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="portfolio_styles.css">
+		<link rel="shortcut icon" href="images/portfolio_favicon.ico" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			function controlNav() {
@@ -17,7 +18,7 @@
 					document.getElementById("mySidenav").style.width = "200px";
 					document.getElementById("main").style.marginLeft = "200px";
 					$('#menuButton').animate({'opacity': 0}, 300, function(){
-							$(this).html('&#9932').animate({'opacity': 1}, 300);
+							$(this).html('X').animate({'opacity': 1}, 300);
 						});
 				}
 			}
@@ -37,7 +38,7 @@
 			</div>
 		</div>
 		<div id="main">
-			<span style="font-size:30px;cursor:pointer" onclick="controlNav()" id='menuButton'>&#9776</span>
+			<span onclick="controlNav()" id='menuButton'>&#9776</span>
 		</div>
 	</body>
 </html>

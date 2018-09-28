@@ -80,3 +80,9 @@ body {
 	text-align: center;
 	width: 100%;
 }
+
+#menuButton {
+	font-size:30px;
+	cursor:pointer;
+	font-family: "Quicksand", Arial, sans-serif;
+}
