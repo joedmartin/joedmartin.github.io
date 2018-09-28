@@ -4,24 +4,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="portfolio_styles.css">
 		<link rel="shortcut icon" href="images/portfolio_favicon.ico" />
+		<script type="text/javascript" src="index.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			function controlNav() {
-				if (document.getElementById("navBar").style.width == "200px") {
-					document.getElementById("navBar").style.width = "0";
-					document.getElementById("main").style.marginLeft= "0";
-					$("#menuButton").animate({"opacity": 0}, 300, function() {
-							$(this).html("&#9776").animate({"opacity": 1}, 300);
-					});
-				} else {
-					document.getElementById("navBar").style.width = "200px";
-					document.getElementById("main").style.marginLeft = "200px";
-					$("#menuButton").animate({"opacity": 0}, 300, function() {
-							$(this).html("X").animate({"opacity": 1}, 300);
-					});
-				}
-			}
-		</script>
 	</head>
 	<body>
 		<div id="navBar">
