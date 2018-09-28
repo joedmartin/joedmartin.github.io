@@ -7,38 +7,37 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			function controlNav() {
-				if (document.getElementById("mySidenav").style.width == "200px"){
-					document.getElementById("mySidenav").style.width = "0";
+				if (document.getElementById("navBar").style.width == "200px") {
+					document.getElementById("navBar").style.width = "0";
 					document.getElementById("main").style.marginLeft= "0";
-					$('#menuButton').animate({'opacity': 0}, 300, function(){
-							$(this).html('&#9776').animate({'opacity': 1}, 300);
-						});
-				} else
-				{
-					document.getElementById("mySidenav").style.width = "200px";
+					$("#menuButton").animate({"opacity": 0}, 300, function() {
+							$(this).html("&#9776").animate({"opacity": 1}, 300);
+					});
+				} else {
+					document.getElementById("navBar").style.width = "200px";
 					document.getElementById("main").style.marginLeft = "200px";
-					$('#menuButton').animate({'opacity': 0}, 300, function(){
-							$(this).html('X').animate({'opacity': 1}, 300);
-						});
+					$("#menuButton").animate({"opacity": 0}, 300, function() {
+							$(this).html("X").animate({"opacity": 1}, 300);
+					});
 				}
 			}
 		</script>
 	</head>
 	<body>
-		<div id="mySidenav" class="sidenav">
-			<table class="name"><tr><td>&nbspJoseph&nbsp</td></tr><tr><td>&nbspMartin&nbsp</td></tr></table>
-			<table class="menulinktable">
-				<tr><td><a href="newtab.html" class="menulink">Home</a></td></tr>
-				<tr><td><a href="#" class="menulink">Work</a></td></tr>
-				<tr><td><a href="#" class="menulink">About</a></td></tr>
-				<tr><td><a href="#" class="menulink">Contact</a></td></tr>
+		<div id="navBar">
+			<table id="myName"><tr><td>JOSEPH</td></tr><tr><td>MARTIN</td></tr></table>
+			<table id="navBarLinksTable">
+				<tr><td><a href="#" class="navBarLink">Home</a></td></tr>
+				<tr><td><a href="#" class="navBarLink">Work</a></td></tr>
+				<tr><td><a href="#" class="navBarLink">About</a></td></tr>
+				<tr><td><a href="#" class="navBarLink">Contact</a></td></tr>
 			</table>
-			<div class="socialfooter">
-				<a href="https://www.linkedin.com/in/jdm/"><img src="images/icon_linkedin.png" width="50" height="50"></a>
+			<div id="socialFooter">
+				<a href="https://www.linkedin.com/in/jdm/"><img src="images/icon_linkedin.png" width="30" height="30"></a>
 			</div>
 		</div>
 		<div id="main">
-			<span onclick="controlNav()" id='menuButton'>&#9776</span>
+			<span onclick="controlNav()" id="menuButton">&#9776</span>
 		</div>
 	</body>
 </html>

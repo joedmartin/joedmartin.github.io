@@ -1,4 +1,23 @@
-.sidenav {
+html {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(to bottom right, #e6e6e6 0%, #f2f2f2 100%);
+}
+
+#main {
+	transition: margin-left .7s;
+	padding: 16px;
+}
+
+#menuButton {
+	font-size: 30px;
+	cursor: pointer;
+	font-family: "Quicksand", Arial, sans-serif;
+}
+
+#navBar {
 	height: 100%;
 	width: 0;
 	position: fixed;
@@ -11,7 +30,25 @@
 	padding-top: 20px;
 }
 
-.menulink {
+#myName {
+	background-color: black;
+	color: white;
+	font-family: "Quicksand", Arial, sans-serif;
+	line-height: 35px;
+	font-size: 23px;
+	letter-spacing: 9px;
+	text-align: center;
+	width: 100%;
+}
+
+#navBarLinksTable {
+	transition: 0.3s;
+	text-align: right;
+	width: 100%;
+	padding: 30px 25px 0px 0px;
+}
+
+.navBarLink {
 	position: relative;
 	text-decoration: none;
 	font-size: 15px;
@@ -22,18 +59,11 @@
 	line-height: 25px;
 }
 
-.menulinktable {
-	transition: 0.3s;
-	text-align: right;
-	width: 100%;
-	padding: 30px 25px 0px 0px;
-}
-
-.menulink:hover {
+.navBarLink:hover {
 	color: #000;
 }
 
-.menulink:before {
+.navBarLink:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -48,41 +78,19 @@
 	transition: all 0.3s ease-in-out 0s;
 }
 
-.menulink:hover:before {
+.navBarLink:hover:before {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
-.socialfooter {
+#socialFooter {
 	position: absolute;
     bottom: 40px;
     right: 20px;
 }
 
-#main {
-	transition: margin-left .7s;
-	padding: 16px;
-}
 
-body {
-	background-color: rgb(245, 243, 244);
-}
 
-.name {
-	background-color: black;
-	color: white;
-	font-family: "Quicksand", Arial, sans-serif;
-	text-transform: uppercase;
-	line-height: 35px;
-	font-size: 23px;
-	letter-spacing: 9px;
-	text-align: center;
-	width: 100%;
-}
 
-#menuButton {
-	font-size:30px;
-	cursor:pointer;
-	font-family: "Quicksand", Arial, sans-serif;
-}
+
