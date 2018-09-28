@@ -3,8 +3,7 @@ const USER_NAME = "Joe"; // The name you want to display. Most likely yours!
 const CITY_ZIPCODE = "19104"; // The zipcode you want to have the weather displayed for.
 
 // Selects a random number within the range (1-NUM_PICTURES) to be set as the left background image.
-document.images['RandomImg'].src = 'images/image_' + Math.floor(NUM_PICTURES * Math.random()) + '.jpg';
-
+document.getElementById('image').src = 'images/image_' + Math.floor(NUM_PICTURES * Math.random()) + '.jpg';
 // Function for fetching the weather information and updating every minute.
 function fetchWeather(){
 	// OpenWeatherMap is the service being used for the weather data fetching. Currently, the api call is hardcoded with my (Joe Martin) API key.
@@ -43,22 +42,22 @@ function fetchWeather(){
 				// Each one has its own icon except Atmosphere which uses clear because what does Atmosphere even mean???
 				// Also, if it is night/day the icons will be changed accordingly.
 				// If none of the conditions are matched, a blank image will be displayed and you should fix it.
-				if (msg.weather[0].main == "Rain") { document.images['weatherIcon'].src = 'images/Rain.png';}
-				else if (msg.weather[0].main == "Clear" && isDay == true) {document.images['weatherIcon'].src = 'images/Clear.png';}
-				else if (msg.weather[0].main == "Clear" && isDay == false) {document.images['weatherIcon'].src = 'images/Clear_Night.png';}
-				else if (msg.weather[0].main == "Atmosphere" && isDay == true) {document.images['weatherIcon'].src = 'images/Clear.png';}
-				else if (msg.weather[0].main == "Atmosphere" && isDay == false) {document.images['weatherIcon'].src = 'images/Clear_Night.png';}
-				else if (msg.weather[0].main == "Thunderstorm") {document.images['weatherIcon'].src = 'images/Thunderstorm.png';}
-				else if (msg.weather[0].main == "Drizzle" && isDay == true) {document.images['weatherIcon'].src = 'images/Drizzle.png';}
-				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
-				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.images['weatherIcon'].src = 'images/Clouds.png';}
-				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.images['weatherIcon'].src = 'images/Clouds_Night.png';}
-				else if (msg.weather[0].main == "Haze" && isDay == true) {document.images['weatherIcon'].src = 'images/Clouds.png';}
-				else if (msg.weather[0].main == "Haze" && isDay == false) {document.images['weatherIcon'].src = 'images/Clouds_Night.png';}
-				else if (msg.weather[0].main == "Mist" && isDay == true) {document.images['weatherIcon'].src = 'images/Drizzle.png';}
-				else if (msg.weather[0].main == "Mist" && isDay == false) {document.images['weatherIcon'].src = 'images/Drizzle_Night.png';}
-				else if (msg.weather[0].main == "Snow") {document.images['weatherIcon'].src = 'images/Snow.png';}
-				else {document.images['weatherIcon'].src = 'images/Blank.png';}
+                if (msg.weather[0].main == "Rain") { document.getElementById('weatherIcon').src = 'images/Rain.png';}
+				else if (msg.weather[0].main == "Clear" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Clear.png';}
+				else if (msg.weather[0].main == "Clear" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Clear_Night.png';}
+				else if (msg.weather[0].main == "Atmosphere" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Clear.png';}
+				else if (msg.weather[0].main == "Atmosphere" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Clear_Night.png';}
+				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weatherIcon').src = 'images/Thunderstorm.png';}
+				else if (msg.weather[0].main == "Drizzle" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Drizzle.png';}
+				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Drizzle_Night.png';}
+				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Clouds.png';}
+				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Clouds_Night.png';}
+				else if (msg.weather[0].main == "Haze" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Clouds.png';}
+				else if (msg.weather[0].main == "Haze" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Clouds_Night.png';}
+				else if (msg.weather[0].main == "Mist" && isDay == true) {document.getElementById('weatherIcon').src = 'images/Drizzle.png';}
+				else if (msg.weather[0].main == "Mist" && isDay == false) {document.getElementById('weatherIcon').src = 'images/Drizzle_Night.png';}
+				else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = 'images/Snow.png';}
+				else {document.getElementById('weatherIcon').src = 'images/Blank.png';}
 			}
 		});
 	// Sets a timeout so that the function will be called and the weather updated every minute.

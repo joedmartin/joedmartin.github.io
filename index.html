@@ -1,66 +1,43 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<title>New Tab</title>
-	<link rel='stylesheet' type='text/css' href='style.css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-	<div class='left'>
-		<img id='image' src='images/image_1.jpg' name='RandomImg' >
-		<div id='welcome1'>
-			<p id='begin'></p><p id='end'></p>
-			<p id='welcome2'>Where would you like to go today?</p>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="portfolio_styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			function controlNav() {
+				if (document.getElementById("mySidenav").style.width == "200px"){
+					document.getElementById("mySidenav").style.width = "0";
+					document.getElementById("main").style.marginLeft= "0";
+					$('#menuButton').animate({'opacity': 0}, 300, function(){
+							$(this).html('&#9776').animate({'opacity': 1}, 300);
+						});
+				} else
+				{
+					document.getElementById("mySidenav").style.width = "200px";
+					document.getElementById("main").style.marginLeft = "200px";
+					$('#menuButton').animate({'opacity': 0}, 300, function(){
+							$(this).html('&#9932').animate({'opacity': 1}, 300);
+						});
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<table class="name"><tr><td>&nbspJoseph&nbsp</td></tr><tr><td>&nbspMartin&nbsp</td></tr></table>
+			<table class="menulinktable">
+				<tr><td><a href="newtab.html" class="menulink">Home</a></td></tr>
+				<tr><td><a href="#" class="menulink">Work</a></td></tr>
+				<tr><td><a href="#" class="menulink">About</a></td></tr>
+				<tr><td><a href="#" class="menulink">Contact</a></td></tr>
+			</table>
+			<div class="socialfooter">
+				<a href="https://www.linkedin.com/in/jdm/"><img src="images/icon_linkedin.png" width="50" height="50"></a>
+			</div>
 		</div>
-		<div id='weatherDiv'>
-			<table class='weatherTable'>
-				<tr><th id='cityname' colspan="3" class='weatherTableTitle'></th></tr>
-				<tr><td colspan="3"><hr style='opacity: 0.5'><td></tr>
-				<tr><td rowspan="5" style='text-align: center'><img id='weatherIcon' src='images/Blank.png' name='weatherIcon'></td></tr>
-				<tr><td id='time' colspan="3" class='weatherTableTime'></td></tr>
-				<tr><td id='day' class='weatherTableDate' colspan="3"></td></tr>
-				<tr><td colspan="3"><hr style='opacity: 0.5'></td></tr>
-				<tr><td id='temperature' class='weatherTableTemp'></td><td id='temperaturedetails' class='weatherTableOther'></td></tr>
-				<tr><td id='conditions' class='weatherTableDescription'></td><td id='highlow' class='weatherTableHighLow'></td></tr>
-			</table>
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="controlNav()" id='menuButton'>&#9776</span>
 		</div>
-	</div>
-	<div class='right'>
-		<img id='gradient' src='images/gradient.jpg'>
-		<div class='container'>
-			<h1>General</h1>
-			<table class='bookmarktable'>
-				<tr>
-					<td class='bookmarkentry'><a href='https://mail.google.com/mail/u/0/?tab=wm#inbox'><div class='cell'><img class='fav' src='images/logo_gmail.png'><p class='inner'>Gmail</p></div></a></td>
-					<td class='bookmarkentry'><a href='https://drive.google.com/drive/?tab=wo'><div class='cell'><img class='fav' src='images/logo_googledrive.png'><p class='inner'>Drive</p></div></a></td>
-					<td class='bookmarkentry'><a href='https://calendar.google.com/calendar/r?tab=oc'><div class='cell'><img class='fav' src='images/logo_calendar.png'><p class='inner'>Calendar</p></div></a></td>
-				</tr>
-			</table>
-			<h1>Media</h1>
-			<table class='bookmarktable'>
-				<tr>
-					<td class='bookmarkentry'><a href='https://www.youtube.com/'><div class='cell'><img class='fav' src='images/logo_youtube.png'><p class='inner'>Youtube</p></div></a></td>
-					<td class='bookmarkentry'><a href='http://www.facebook.com/'><div class='cell'><img class='fav' src='images/logo_facebook.png'><p class='inner'>Facebook</p></div></a></td>
-					<td class='bookmarkentry'><a href='http://app.plex.tv/web/app'><div class='cell'><img class='fav' src='images/logo_plex.png'><p class='inner'>Plex</p></div></a></td>
-				</tr>
-			</table>
-			<h1>School</h1>
-			<table class='bookmarktable'>
-				<tr>
-					<td class='bookmarkentry'><a href='https://connect.drexel.edu/'><div class='cell'><img class='fav' src='images/logo_drexelone.png'><p class='inner'>Drexel Connect</p></div></a></td>
-					<td class='bookmarkentry'><a href='https://outlook.office.com/owa/'><div class='cell'><img class='fav' src='images/logo_outlook.png'><p class='inner'>Drexel Email</p></div></a></td>
-					<td class='bookmarkentry'><a href='https://connect.studenthousing.com/'><div class='cell'><img class='fav' src='images/logo_summit.png'><p class='inner'>Summit Connect</p></div></a></td>
-				</tr>
-			</table>
-			<h1>Other</h1>
-			<table class='bookmarktable'>
-				<tr>
-					<td class='bookmarkentry'><a href='https://www.pnc.com/en/personal-banking/banking/checking.html'><div class='cell'><img class='fav' src='images/logo_pnc.png'><p class='inner'>PNC</p></div></a></td>
-					<td class='bookmarkentry'><a href='https://www.discover.com/'><div class='cell'><img class='fav' src='images/logo_discover.png'><p class='inner'>Discover</p></div></a></td>
-					<td class='bookmarkentry'></td>
-				</tr>
-			</table>
-		</div>
-	</div>
-</body>
-<script src='script.js'></script>
+	</body>
 </html>
