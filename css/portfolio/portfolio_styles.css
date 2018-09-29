@@ -1,0 +1,15 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(to bottom left, #e6e6e6, #f2f2f2);
+	margin: 0px;
+}
+
+
+#main {
+	transition: .5s;
+    margin-left: 40px;
+    padding: 16px;
+}

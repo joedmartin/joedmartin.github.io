@@ -1,37 +1,41 @@
-html {
-	height: 100%;
-}
-
-body {
-	background: linear-gradient(to bottom left, #e6e6e6, #f2f2f2);
-}
-
-#main {
-	transition: margin-left .7s;
-	padding: 16px;
+#menuButtonTable {
+    text-align: right;
+    width: 100%;
+    padding-right: 4px;
+    height: 50px;
 }
 
 #menuButton {
 	font-size: 30px;
 	cursor: pointer;
-	font-family: "Quicksand", Arial, sans-serif;
+    font-family: "Quicksand", Arial, sans-serif;
 }
 
 #navBar {
 	height: 100%;
-	width: 0;
+	width: 40px;
 	position: fixed;
-	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: rgb(255, 255, 255);
 	overflow-x: hidden;
-	transition: 0.7s;
-	padding-top: 20px;
+	transition: 0.5s;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.navBarIcon{
+    background: #202020;
+    transition: 0.7s;
+}
+
+.navBarIcon:hover{
+    background:rgb(212, 71, 71);
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 #myName {
-	background-color: black;
+	background-color: #202020;
 	color: white;
 	font-family: "Quicksand", Arial, sans-serif;
 	line-height: 35px;
@@ -45,7 +49,7 @@ body {
 	transition: 0.3s;
 	text-align: right;
 	width: 100%;
-	padding: 30px 25px 0px 0px;
+	padding: 7px 20px 0px 2px;
 }
 
 .navBarLink {
@@ -86,11 +90,15 @@ body {
 
 #socialFooter {
 	position: absolute;
-    bottom: 40px;
-    right: 20px;
+    bottom: 5px;
+	right: 3px;
+	left: 5px;
 }
 
+#firstName {
+    padding-left:7px;
+}
 
-
-
-
+#lastName {
+    padding-left: 7px;
+}

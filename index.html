@@ -2,26 +2,34 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/portfolio_styles.css">
+        <link rel="stylesheet" href="css/portfolio/portfolio_styles.css">
+        <link rel="stylesheet" href="css/portfolio/navbar_styles.css">
 		<link rel="shortcut icon" href="images/portfolio_favicon.ico" />
-		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/portfolio/navbar.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<div id="navBar">
-			<table id="myName"><tr><td>JOSEPH</td></tr><tr><td>MARTIN</td></tr></table>
-			<table id="navBarLinksTable">
-				<tr><td><a href="#" class="navBarLink">Home</a></td></tr>
-				<tr><td><a href="#" class="navBarLink">Work</a></td></tr>
-				<tr><td><a href="#" class="navBarLink">About</a></td></tr>
-				<tr><td><a href="#" class="navBarLink">Contact</a></td></tr>
-			</table>
-			<div id="socialFooter">
-				<a href="https://www.linkedin.com/in/jdm/"><img src="images/icon_linkedin.png" width="30" height="30"></a>
+        <div id="navBar" style="width:40px;">
+            <table id="menuButtonTable"><tr><td><span onclick="navControl()" id="menuButton">&#9776</span></td></tr></table>
+            <table id="myName"><tr><td id="firstName">J</td></tr><tr><td id="lastName">M</td></tr></table>
+            <table>
+            </table>
+            <table id="navBarLinksTable">
+                <tr><td id="home"><img class="navBarIcon" src="images/home.png" width="30" height="30"></td></tr>
+                <tr><td id="about"><img class="navBarIcon" src="images/about.png" width="30" height="30"></td></tr>
+                <tr><td id="work"><img class="navBarIcon" src="images/work.png" width="30" height="30"></td></tr>
+                <tr><td id="contact"><img class="navBarIcon" src="images/contact.png" width="30" height="30"></td></tr>
+            </table>
+
+            <div id="socialFooter">
+                <table>
+                    <tr><td><a href="https://www.linkedin.com/in/jdm/"><img src="images/icon_linkedin.png" class="navBarIcon" width="30" height="30"></a></td></tr>
+                    <tr><td><a href="https://github.com/joedmartin"><img src="images/icon_github.png" class="navBarIcon" width="30" height="30"></a></td></tr>
+                </table>
 			</div>
 		</div>
-		<div id="main">
-			<span onclick="controlNav()" id="menuButton">&#9776</span>
+		<div id="main" style="margin-left: 40px;">
+            <p></p>
 		</div>
 	</body>
 </html>
