@@ -33,6 +33,7 @@ body {
 	cursor: pointer;
 	transform: scale(1.1);
 	transition: .5s;
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
 }
 
 #menuButtonBars:hover {
