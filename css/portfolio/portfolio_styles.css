@@ -1,16 +1,16 @@
 html {
-	height: 200%;
+	height: 1000px;
 }
 
 body {
 	background: linear-gradient(to bottom left, #e6e6e6, #f2f2f2);
-	margin: 0%;
+	margin: 0px;
 }
 
 #menuButton {
 	position: fixed;
-	top: 2%;
-	left: 2%;
+	top: 15px;
+	left: 15px;
 	height: 60px;
 	width: 60px;
     display: table;
