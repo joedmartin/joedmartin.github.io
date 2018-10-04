@@ -10,14 +10,13 @@
 	</head>
 	<body>
 		<div id="navBar" style="width:0px;">
-			<br>
-            <table id="myName"><tr><td id="firstName">JOSEPH</td></tr><tr><td id="lastName">MARTIN</td></tr></table>
-            <table id="navBarLinksTable">
-                <tr><td id="home"><a href="#" class="navBarLink">Home</a></td></tr>
-                <tr><td id="about"><a href="#" class="navBarLink">About</a></td></tr>
-                <tr><td id="work"><a href="#" class="navBarLink">Work</a></td></tr>
-                <tr><td id="contact"><a href="#" class="navBarLink">Contact</a></td></tr>
-			</table>
+			<div id="navBarContent" style="opacity:0;">
+				<p id="myName">JOSEPH<br>MARTIN</p>
+				<a href="#" class="navBarLink">HOME</a><br>
+            	<a href="#" class="navBarLink">ABOUT</a><br>
+            	<a href="#" class="navBarLink">WORK</a><br>
+				<a href="#" class="navBarLink">CONTACT</a><br>
+			</div>
 		</div>
 		<div id="main">
 			<div id="menuButton" onclick="navControl(this)"">

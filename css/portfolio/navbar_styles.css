@@ -7,40 +7,31 @@
 	overflow-x: hidden;
 	transition: 0.5s;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-    background: white;
-}
-
-#home, #about, #work, #contact, #firstName, #lastName {
-	opacity: 0;
+	background: white;
+	text-align: right;
 }
 
 #myName {
-	background-color: #202020;
-	color: white;
+	background-color: black;
 	font-family: "Quicksand", Arial, sans-serif;
-	line-height: 35px;
+	line-height: 40px;
 	font-size: 23px;
 	letter-spacing: 9px;
 	text-align: center;
 	width: 100%;
-	padding-left:7px;
-}
-
-#navBarLinksTable {
-	text-align: right;
-	width: 100%;
-	padding: 7px 20px 0px 2px;
-	height: 165px;
+	padding-left:2px;
+	margin-top:25px;
+	color: white;
 }
 
 .navBarLink {
 	position: relative;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 17px;
 	color: #818181;
-	text-transform: uppercase;
 	font-family: "Quicksand", Arial, sans-serif;
-	line-height: 25px;
+	line-height: 30px;
+	margin-right: 20px;
 }
 
 .navBarLink:hover {
