@@ -1,5 +1,5 @@
 html {
-	height: 1000px;
+	height: 150%;
 }
 
 body {
@@ -8,54 +8,27 @@ body {
 }
 
 #menuButton {
+	font-size: 30px;
+	font-family: "Quicksand", Arial, sans-serif;
+	line-height: 0.5px;
+}
+
+#menuButtonContainer {
+	transition: .5s;
 	position: fixed;
 	top: 15px;
 	left: 15px;
-	height: 60px;
-	width: 60px;
-    display: table;
 	background-color: rgba(185, 184, 184, 0.4);
 	border-radius: 100%;
-	transition: .5s;
-}
-
-#menuButtonBars {
-	height: 100%;
-    display: table-cell;
-    vertical-align: middle;
+	width: 60px;
+	height: 60px;
 	text-align: center;
-	transition: .5s;
-	padding-left: 6px;
 }
 
-#menuButton:hover {
-	background-color: rgba(160, 71, 71, 0.2);
+#menuButtonContainer:hover {
+	background-color: rgba(185, 184, 184, 0.747);
 	cursor: pointer;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	transition: .5s;
-	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-}
-
-#menuButtonBars:hover {
-	transform: scale(0.9);
-}
-
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 6px;
-    transition: 0.5s;
-}
-
-.change .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-	opacity: 0;
-}
-
-.change .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
 }
