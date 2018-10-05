@@ -11,6 +11,7 @@ body {
 	font-size: 30px;
 	font-family: "Quicksand", Arial, sans-serif;
 	line-height: 0.5px;
+	color: white;
 }
 
 #menuButtonContainer {
@@ -18,17 +19,17 @@ body {
 	position: fixed;
 	top: 15px;
 	left: 15px;
-	background-color: rgba(185, 184, 184, 0.4);
+	background-color: rgb(39, 39, 39);
 	border-radius: 100%;
 	width: 60px;
 	height: 60px;
 	text-align: center;
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
 }
 
 #menuButtonContainer:hover {
-	background-color: rgba(185, 184, 184, 0.747);
 	cursor: pointer;
 	transform: scale(1.05);
 	transition: .5s;
-	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.7);
 }
