@@ -24,12 +24,12 @@ body {
 	width: 60px;
 	height: 60px;
 	text-align: center;
-	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
 }
 
 #menuButtonContainer:hover {
 	cursor: pointer;
 	transform: scale(1.05);
 	transition: .5s;
-	box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.4);
 }
