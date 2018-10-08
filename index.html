@@ -10,26 +10,31 @@
 	</head>
 	<body>
 		<div id="navBar" style="width:0px;">
-			<div class="navBarContent" style="opacity:0;">
-				<p id="myName">JOSEPH<br>MARTIN</p>
-				<a href="#" class="navBarLink">HOME</a><br>
-            	<a href="#" class="navBarLink">ABOUT</a><br>
-            	<a href="#" class="navBarLink">WORK</a><br>
-				<a href="#" class="navBarLink">CONTACT</a><br>
-				<div id="verticalDivide"></div>
-				<div id="socialFooter">
+			<table id="navBarTable" style="opacity:0;">
+				<tr><td id="navBarTableHeader">
+					<p id="myName">JOSEPH<br>MARTIN</p>
+					<a href="#" class="navBarLink">HOME</a><br>
+					<a href="#" class="navBarLink">ABOUT</a><br>
+					<a href="#" class="navBarLink">WORK</a><br>
+					<a href="#" class="navBarLink">CONTACT</a><br>
+				</td></tr>
+				<tr><td id="navBarTableContent">
+				</td></tr>
+				<tr><td id="navBarTableFooter">
 					<a href="https://www.linkedin.com/in/jdm" target="_blank" class="navBarLink">LINKEDIN</a><br>
 					<a href="https://github.com/joedmartin" target="_blank" class="navBarLink">GITHUB</a><br>
-				</div>
-			</div>
+				</td></tr>
+			</table>
 		</div>
 		<div onclick="navControl()" id="menuButtonContainer">
 			<p id="menuButton">&#9776</p>
 		</div>
 		<div id="main">
 			<div id="header">
+				<!--
 				<img style="width:100%;" src="images/me1_bw.jpg">
 				<p id="headerName">JOSEPH MARTIN</p>
+				-->
 			</div>
 		</div>
 	</body>
