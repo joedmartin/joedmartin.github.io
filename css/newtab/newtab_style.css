@@ -176,6 +176,7 @@ table.weatherTable {
 	margin: auto;
 	min-height: 100%;
 	min-width: 100%;
+	filter: blur(1rem);
 }
 
 #weatherDiv {
