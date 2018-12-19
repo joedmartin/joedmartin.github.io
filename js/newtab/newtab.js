@@ -1,4 +1,4 @@
-const NUM_PICTURES = 234; // The number of pictures in the images folder.
+const NUM_PICTURES = 50; // The number of pictures in the images folder.
 const USER_NAME = "Joe"; // The name you want to display. Most likely yours!
 const CITY_ZIPCODE = "19104"; // The zipcode you want to have the weather displayed for.
 
