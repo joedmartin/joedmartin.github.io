@@ -46,7 +46,7 @@ body {
 	text-shadow: 0px 0px 5px #a3a3a3c5;
 }
 
-#time {
+#hour, #colon, #minute {
 	font-size: 85px;
 }
 
