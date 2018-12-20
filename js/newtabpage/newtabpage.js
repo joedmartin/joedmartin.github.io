@@ -4,6 +4,7 @@ const CITY_ZIPCODE = "19104"; // The zipcode for which you want to have the weat
 
 $( document ).ready(function() {
 	document.getElementById('backgroundImage').src = 'images/image_' + Math.floor(NUM_PICTURES * Math.random()) + '.jpg';
+	document.getElementById('welcome1').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())])
 	updateTimeAndDate();
 });
 
@@ -46,3 +47,27 @@ function formatMinutes(hours, minutes) {
 		return (minutes + " AM");
 	}
 }
+
+// Contains phrases in first, last pairs. Both must be specified.
+// Index 0 corresponds to the top line of text, and index 1 is the bottom.
+// If index 1 is an empty string, the bottom line won't be displayed. (good for short phrases)
+var phrases = [
+	['Sup, dude.'],
+	['Good to see you again!'],
+	['Welcome back ' + USER_NAME + '!'],
+	['How\'s it going, ' + USER_NAME + '?'],
+	['Hello again, ' + USER_NAME + '!'],
+	['Yo, my guy.'],
+	['Hi, ' + USER_NAME + '!'],
+	['How\'s it hanging?'],
+	['How goes it, ' + USER_NAME + '?'],
+	['Suhhh dude.'],
+	['What\'s cracking my man?'],
+	['Ello, gov\'nor!'],
+	['How you doin\'?'],
+	['What\'s cookin\', good lookin\'?'],
+	['Hello there.'],
+	['Hey boo.'],
+	['*Hat tip*'],
+	['Good day sir.']
+];
