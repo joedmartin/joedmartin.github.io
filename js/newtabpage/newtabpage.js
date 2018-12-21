@@ -8,8 +8,8 @@ $( document ).ready(function() {
 	$('#welcome1').animate({marginTop:"70px",opacity:'1'},{queue:false,duration:800});
 	$('#clock').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
 	$('#weather').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
-	$('#welcome2').animate({opacity:'1'},{queue:false,duration:800});
-	$('#bookmarkContainer').animate({opacity:'1'},{queue:false,duration:800});
+	$('#welcome2').animate({opacity:'1'},{queue:false,duration:1200});
+	$('#bookmarkContainer').animate({opacity:'1'},{queue:false,duration:1200});
 	updateTimeAndDate();
 	fetchWeather();
 });
