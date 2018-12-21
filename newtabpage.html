@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>New Tab</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="images/newtab_favicon.ico" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel='stylesheet' type='text/css' href='css/newtabpage/newtabpage.css'>
@@ -10,29 +11,33 @@
 	<div id="mainContainer">
 		<img id='backgroundImage' src='images/Blank.png'>
 		<div id="mainContent">
-			<p id="welcome1"></p>
-			<p id="welcome2">Where would you like to go today?</p>
-			<div id="flexContainer">
-				<div><a href='https://mail.google.com/mail/u/0/?tab=wm#inbox'><img class='fav' src='images/logo_gmail.png'></a></div>
-				<div><a href='https://drive.google.com/drive/?tab=wo'><img class='fav' src='images/logo_googledrive.png'></a></div>
-				<div><a href='https://calendar.google.com/calendar/r?tab=oc'><img class='fav' src='images/logo_calendar.png'></a></div>
-				<div><a href='https://www.youtube.com/'><img class='fav' src='images/logo_youtube.png'></a></div>
-				<div><a href='http://www.facebook.com/'><img class='fav' src='images/logo_facebook.png'></a></div>
-				<div><a href='http://app.plex.tv/web/app'><img class='fav' src='images/logo_plex.png'></a></div>
-				<div><a href='https://connect.drexel.edu/'><img class='fav' src='images/logo_drexelone.png'></a></div>
-				<div><a href='https://outlook.office.com/owa/'><img class='fav' src='images/logo_outlook.png'></a></div>
-				<div><a href='https://homelinere.appfolio.com/connect/users/sign_in'><img class='fav' src='images/logo_appfolio.png'></a></div>
-				<div><a href='https://www.pnc.com/en/personal-banking/banking/checking.html'><img class='fav' src='images/logo_pnc.png'></a></div>
-				<div><a href='https://www.discover.com/'><img class='fav' src='images/logo_discover.png'></a></div>
-				<div><a href='https://discordapp.com/activity'><img class='fav' src='images/logo_discord.png'></a></div>
-			</div>
-		</div>
-		<div id="clock">
-			<span id="hour"></span>
-			<span id="colon">:</span>
-			<span id="minute"></span>
-			<br>
-			<span id="date"></span>
+			<span id="mainSection1">
+				<p id="welcome1"></p>
+			</span>
+			<span id="mainSection2">
+				<p id="welcome2">Where would you like to go today?</p>
+				<div id="bookmarkContainer">
+					<div><a href='https://mail.google.com/mail/u/0/?tab=wm#inbox'><img class='fav' src='images/logo_gmail.png'></a></div>
+					<div><a href='https://drive.google.com/drive/?tab=wo'><img class='fav' src='images/logo_googledrive.png'></a></div>
+					<div><a href='https://calendar.google.com/calendar/r?tab=oc'><img class='fav' src='images/logo_calendar.png'></a></div>
+					<div><a href='https://www.youtube.com/'><img class='fav' src='images/logo_youtube.png'></a></div>
+					<div><a href='http://www.facebook.com/'><img class='fav' src='images/logo_facebook.png'></a></div>
+					<div><a href='http://app.plex.tv/web/app'><img class='fav' src='images/logo_plex.png'></a></div>
+					<div><a href='https://connect.drexel.edu/'><img class='fav' src='images/logo_drexelone.png'></a></div>
+					<div><a href='https://outlook.office.com/owa/'><img class='fav' src='images/logo_outlook.png'></a></div>
+					<div><a href='https://homelinere.appfolio.com/connect/users/sign_in'><img class='fav' src='images/logo_appfolio.png'></a></div>
+					<div><a href='https://www.pnc.com/en/personal-banking/banking/checking.html'><img class='fav' src='images/logo_pnc.png'></a></div>
+					<div><a href='https://www.discover.com/'><img class='fav' src='images/logo_discover.png'></a></div>
+					<div><a href='https://discordapp.com/activity'><img class='fav' src='images/logo_discord.png'></a></div>
+				</div>
+				<span id="clock">
+					<span id="hour"></span>
+					<span id="colon">:</span>
+					<span id="minute"></span>
+					<br>
+					<span id="date"></span>
+				</span>
+			</span>
 		</div>
 	</div>
 </body>
