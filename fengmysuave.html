@@ -13,25 +13,22 @@
                 background-attachment: fixed;
                 background-size: cover;
             }
-            video {
-                position: absolute;
-                top: 49%;
-                right: 15%;
-                transform: translateY(-50%);
-            }
             #thanks {
                 font-size: 10px;
                 position: absolute;
                 right: 2%;
                 bottom: 2%;
-            }
+			}
+			#video {
+				position: absolute;
+				left: 15%;
+				top: 22.5%;
+			}
         </style>
     </head>
     <body>
     <div id="container">
-        <video id="video" height="85%" width="70%" opacity="75%" controls>
-            <source src="videos/Feng _Suave.mp4" type="video/mp4">
-        </video>
+		<iframe id="video" width="70%" height="55%" src="https://www.youtube.com/embed/N3Jd469Uws8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p id="thanks">thanks yellow days for this background :P</p>
     </div>
     </body>
