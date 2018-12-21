@@ -1,11 +1,12 @@
-const NUM_PICTURES = 50; // The number of pictures in the images folder.
+const NUM_PICTURES = 45; // The number of pictures in the images folder.
 const USER_NAME = "Joe"; // The name you want to display. Most likely yours!
 const CITY_ZIPCODE = "19104"; // The zipcode for which you want to have the weather displayed.
 
 $( document ).ready(function() {
-	document.getElementById('backgroundImage').src = 'images/image_' + Math.floor(NUM_PICTURES * Math.random()) + '.jpg';
+	document.getElementById('backgroundImage').src = 'images/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
 	document.getElementById('welcome1').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())])
 	updateTimeAndDate();
+	fetchWeather();
 });
 
 // Function for getting the time and date data and updating every second.
@@ -71,3 +72,48 @@ var phrases = [
 	['*Hat tip*'],
 	['Good day sir.']
 ];
+
+// Function for fetching the weather information and updating every minute.
+function fetchWeather(){
+	// OpenWeatherMap is the service being used for the weather data fetching. Currently, the api call is hardcoded with my (Joe Martin) API key.
+	// Documentation on the API call being used: https://openweathermap.org/current
+	// The first couple lines are just all the ajax call mumbo jumbo.
+	var URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + CITY_ZIPCODE + "&appid=12d853a64bb392966651a92c1935a587&units=imperial";
+		$.ajax({
+			type: "GET",
+			url : URL,
+			dataType : "jsonp",
+			success : function(msg){
+				// Create a new date object.
+				var dateOne = new Date();
+				// Create a new variable to store the current time with the 3 last digits cut off cause idk what they do...but it works.
+				var currentTime = parseInt(((dateOne.getTime()).toString()).slice(0, -3))
+				// Checks if it is day. Compares the current time to the sunrise and sunset times.
+				if (currentTime > msg.sys.sunrise && currentTime < msg.sys.sunset) {var isDay = true;}
+				else {var isDay = false;}
+				// Checks the current weather condition description from the weather object and selects which weather icon should be displayed.
+				// There are x different possible conditions: Rain, Clear, Atmosphere, Thunderstorm, Drizzle, Clouds, and Snow.
+				// Each one has its own icon except Atmosphere which uses clear because what does Atmosphere even mean???
+				// Also, if it is night/day the icons will be changed accordingly.
+				// If none of the conditions are matched, a blank image will be displayed and you should fix it.
+				if (msg.weather[0].main == "Rain") { document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Rain.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Clear" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clear.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Clear" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clear_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Atmosphere" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clear.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Atmosphere" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clear_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Thunderstorm.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Drizzle" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Drizzle.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Drizzle_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clouds.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clouds_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Haze" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clouds.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Haze" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Clouds_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Mist" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Drizzle.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Mist" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Drizzle_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else if (msg.weather[0].main == "Snow") {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Snow.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				else {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='images/Blank.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+			}
+		});
+	// Sets a timeout so that the function will be called and the weather updated every minute.
+	setTimeout(fetchWeather, 60000);
+}
