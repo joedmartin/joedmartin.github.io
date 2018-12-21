@@ -8,6 +8,7 @@ body {
 	position:fixed;
 	height: 100%;
 	width: 100%;
+	background-color: rgb(78, 78, 78);
 }
 
 #mainContainer {
@@ -151,6 +152,9 @@ body {
 	margin-bottom: 5px;
 }
 
+#backgroundImage {
+	opacity: 0;
+}
 
 /* End Weather CSS */
 
