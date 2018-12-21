@@ -5,6 +5,11 @@ const CITY_ZIPCODE = "19104"; // The zipcode for which you want to have the weat
 $( document ).ready(function() {
 	document.getElementById('backgroundImage').src = '../images/newtabpage/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
 	document.getElementById('welcome1').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())])
+	$('#welcome1').animate({marginTop:"70px",opacity:'1'},{queue:false,duration:800});
+	$('#clock').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
+	$('#weather').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
+	$('#welcome2').animate({opacity:'1'},{queue:false,duration:800});
+	$('#bookmarkContainer').animate({opacity:'1'},{queue:false,duration:800});
 	updateTimeAndDate();
 	fetchWeather();
 });
