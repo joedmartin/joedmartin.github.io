@@ -144,6 +144,10 @@ body {
 	margin: 0px;
 }
 
+#weather:hover {
+	cursor: pointer;
+}
+
 #weatherIcon {
 	height: 70px;
 	width: 70px;
