@@ -73,7 +73,7 @@ body {
 	text-align: center;
 	display: flex;
 	flex-flow: row wrap;
-	max-width: 480px;
+	max-width: 640px;
 	justify-content: center;
 	border-radius: 10px;
 	background-color: #a0a0a049;
