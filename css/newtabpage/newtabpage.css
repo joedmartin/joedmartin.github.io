@@ -164,7 +164,7 @@ body {
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 812px) and (orientation:landscape), (max-width:375px){
+@media only screen and (max-width : 812px) and (orientation:landscape){
 	#welcome1 {
 		font-size: 50px;
 	}
@@ -174,7 +174,6 @@ body {
 	#hour, #colon, #minute {
 		font-size: 45px;
 	}
-
 	#date {
 		font-size: 18px;
 	}
@@ -188,8 +187,8 @@ body {
 		margin: 5px;
 	}
 	#bookmarkContainer {
-		max-width: 300px;
-		margin: 0px auto 20vh auto;
+		max-width: 400px;
+		margin: 0px auto 28vh auto;
 	}
 	#weather {
 		font-size: 25px;
@@ -202,16 +201,26 @@ body {
 	}
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width:376px){
 	#welcome1 {
 		font-size: 35px;
 	}
 	#welcome2 {
 		font-size:25px;
+		margin-bottom: 100px;
 	}
 	#bookmarkContainer {
-		max-width: 300px;
-		margin: 0px auto 40vh auto;
+		max-width: 200px;
+		margin: 0px auto 25vh auto;
+	}
+	#bookmarkContainer img {
+		width: 40px;
+		height: 40px;
+	}
+	#bookmarkContainer > div {
+		width: 40px;
+		height: 40px;
+		margin: 5px;
 	}
 	#weather {
 		font-size: 25px;
@@ -221,5 +230,11 @@ body {
 		height: 70px;
 		width: 70px;
 		margin-bottom: 5px;
+	}
+	#hour, #colon, #minute {
+		font-size: 45px;
+	}
+	#date {
+		font-size: 18px;
 	}
 }
