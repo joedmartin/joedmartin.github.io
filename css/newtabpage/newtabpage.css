@@ -115,7 +115,7 @@ p {
 }
 
 /* Mobile - Landscape */
-@media (max-width: 960px) and (orientation: landscape) {
+@media (max-width: 800px) and (orientation: landscape) {
 	#bookmarkContainer {
 		max-width: 600px !important;
 		top: 22% !important;
@@ -141,7 +141,7 @@ p {
 }
 
 /* Mobile - Portrait */
-@media (max-width: 960px) and (orientation: portrait) {
+@media (max-width: 800px) and (orientation: portrait) {
 	#bookmarkContainer {
 		max-width: 400px;
 		top: 25% !important;
@@ -199,7 +199,7 @@ p {
 		font-size: 83px !important;
 	}
 	#date {
-		font-size: 29.5px !important;
+		font-size: 30px !important;
 	}
 	#weather {
 		font-size: 40px !important;
