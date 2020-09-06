@@ -1,3 +1,6 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
 	font-family: Montserrat !important;
 }
