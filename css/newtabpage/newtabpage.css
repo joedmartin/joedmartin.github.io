@@ -115,7 +115,7 @@ p {
 }
 
 /* Mobile - Landscape */
-@media (max-width: 959px) and (orientation: landscape) {
+@media (max-width: 960px) and (orientation: landscape) {
 	#bookmarkContainer {
 		max-width: 600px !important;
 		top: 22% !important;
@@ -141,10 +141,10 @@ p {
 }
 
 /* Mobile - Portrait */
-@media (max-width: 959px) and (orientation: portrait) {
+@media (max-width: 960px) and (orientation: portrait) {
 	#bookmarkContainer {
 		max-width: 400px;
-		top: 22% !important;
+		top: 25% !important;
 	}
 	.bookmarkItem {
 		flex-basis: 25%;
@@ -169,7 +169,7 @@ p {
 @media (max-width: 960px) {
 	#bookmarkContainer {
 		max-width: 450px;
-		top: 30%;
+		top: 25%;
 	}
 	.bookmarkItem {
 		flex-basis: 16%;
