@@ -167,11 +167,11 @@ p {
 /* Desktop - Small */
 @media (max-width: 960px) {
 	#bookmarkContainer {
-		max-width: 400px;
-		top: 25%;
+		max-width: 450px;
+		top: 30%;
 	}
 	.bookmarkItem {
-		flex-basis: 25%;
+		flex-basis: 16%;
 	}
 	#hour, #colon, #minute {
 		font-size: 60px;
