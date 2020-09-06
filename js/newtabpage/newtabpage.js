@@ -8,8 +8,6 @@ $(document).ready(function() {
 	document.getElementById('welcomeMessage').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())]);
 	$('#greetingContainer').animate({marginTop:"10px",opacity:'1'},{queue:false,duration:800});
 	$('#mainContainer').animate({opacity:'1'},{queue:false,duration:1000});
-	$('#bookmarkContainer').animate({opacity:'1'},{queue:false,duration:1000});
-	$('#footerContainer').animate({opacity:'1'},{queue:false,duration:1000});
 	updateTimeAndDate();
 	fetchWeather();
 });

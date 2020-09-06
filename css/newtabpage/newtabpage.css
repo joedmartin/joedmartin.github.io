@@ -1,5 +1,5 @@
 * {
-	font-family: Montserrat;
+	font-family: Montserrat !important;
 }
 
 html {
@@ -10,6 +10,12 @@ html {
 body {
 	height: 100%;
 	width: 100%;
+	background-color: rgb(61, 61, 61);
+	margin: 0px;
+}
+
+p {
+	margin: 0px;
 }
 
 #mainContainer {
@@ -19,14 +25,13 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	opacity: 0.2;
+	opacity: 0;
 	display: flex;
 	justify-content: center;
 }
 
 #greetingContainer {
 	margin-top: -100px;
-	opacity: 0;
 	text-align: center;
 }
 
@@ -43,7 +48,6 @@ body {
 	top: 35%;
 	justify-content: space-around;
 	position: absolute;
-	opacity: 0;
 	border-radius: 20px;
 	background-color: #a0a0a049;
 	box-shadow: 0px 0px 20px #40414071;
@@ -72,7 +76,6 @@ body {
 
 #footerContainer {
 	position: fixed;
-	opacity: 0;
 	text-shadow: 0px 0px 5px #a3a3a3c5;
 	left: 20px;
 	right: 20px;
@@ -99,11 +102,15 @@ body {
 }
 
 #weatherIcon {
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 #date {
 	margin-left: 5px;
+}
+
+#temperature {
+	margin-bottom: 20px;
 }
 
 /* Mobile - Landscape */
@@ -184,14 +191,14 @@ body {
 /* Desktop - 1080p */
 @media (min-width: 961px) and (max-width: 1920px) {
 	#bookmarkContainer {
-		max-width: 800px;
+		max-width: 900px;
 		top: 40% !important;
 	}
 	#hour, #colon, #minute {
-		font-size: 80px !important;
+		font-size: 83px !important;
 	}
 	#date {
-		font-size: 27px !important;
+		font-size: 30px !important;
 	}
 	#weather {
 		font-size: 40px !important;
@@ -200,41 +207,46 @@ body {
 		height: 100px !important;
 		width: 100px !important;
 	}
+	.bookmarkItem {
+		flex-basis: 10% !important;
+	}
 }
 
 /* Desktop - 1440p */
-
 @media (min-width: 1921px) and (max-width: 2560px) {
 	#bookmarkContainer {
-		max-width: 1050px;
+		max-width: 1200px;
 		top: 40% !important;
 	}
 	#hour, #colon, #minute {
-		font-size: 150px !important;
+		font-size: 112px !important;
 	}
 	#date {
-		font-size: 39.5px !important;
+		font-size: 41px !important;
 	}
 	#weather {
-		font-size: 52px !important;
+		font-size: 55px !important;
 	}
 	#weatherIcon {
-		height: 140px !important;
-		width: 140px !important;
+		height: 145px !important;
+		width: 145px !important;
+	}
+	.bookmarkItem {
+		flex-basis: 10% !important;
 	}
 }
 
 /* Desktop - 2560p */
 @media (min-width: 2561px) {
 	#bookmarkContainer {
-		max-width: 1400px;
+		max-width: 1800px;
 		top: 40% !important;
 	}
 	#hour, #colon, #minute {
-		font-size: 175px !important;
+		font-size: 170px !important;
 	}
 	#date {
-		font-size: 69px !important;
+		font-size: 62px !important;
 	}
 	#weather {
 		font-size: 80px !important;
@@ -242,6 +254,9 @@ body {
 	#weatherIcon {
 		height: 200px !important;
 		width: 200px !important;
+	}
+	.bookmarkItem {
+		flex-basis: 11% !important;
 	}
 }
 
