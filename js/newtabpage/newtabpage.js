@@ -1,17 +1,15 @@
-const NUM_PICTURES = 45; // The number of pictures in the images folder.
-const USER_NAME = "Joe"; // The name you want to display. Most likely yours!
-const CITY_ZIPCODE = "19104"; // The zipcode for which you want to have the weather displayed.
+const NUM_PICTURES = 45; // The number of background images
+const USER_NAME = "Joe"; // The name you want displayed.
+const CITY_ZIPCODE = "19104"; // The zipcode for which you want the have the weather displayed.
 
-$( document ).ready(function() {
-	document.getElementById('backgroundImage').src = '../images/newtabpage/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
-	document.getElementById('welcome1').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())])
-	$('#welcome1').animate({marginTop:"30px",opacity:'1'},{queue:false,duration:800});
-	$('#clock').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
-	$('#weather').animate({bottom:"20px",opacity:'1'},{queue:false,duration:1000});
-	$('#welcome2').animate({opacity:'1'},{queue:false,duration:1200});
-	$('.fav').animate({opacity:'1'},{queue:false,duration:1000});
-	$('#backgroundImage').animate({opacity:'1'},{queue:false,duration:1000});
+// On load function, sets background image and greeting text. Animates page load with opacity and movement. Calls clock and weather functions.
+$(document).ready(function() {
+	document.getElementById('mainContainer').style.backgroundImage  = 'url("../images/newtabpage/backgrounds/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
+	document.getElementById('welcomeMessage').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())]);
+	$('#greetingContainer').animate({marginTop:"10px",opacity:'1'},{queue:false,duration:800});
+	$('#mainContainer').animate({opacity:'1'},{queue:false,duration:1000});
 	$('#bookmarkContainer').animate({opacity:'1'},{queue:false,duration:1000});
+	$('#footerContainer').animate({opacity:'1'},{queue:false,duration:1000});
 	updateTimeAndDate();
 	fetchWeather();
 });
@@ -37,6 +35,7 @@ function updateTimeAndDate() {
 	setTimeout(updateTimeAndDate, 500);
 }
 
+// Helper function to format hours in 12-hour style.
 function formatHours(hours) {
 	if (hours > 12) {
 		return hours - 12;
@@ -47,22 +46,21 @@ function formatHours(hours) {
 	}
 }
 
+// Helper function to format minutes and add on am/pm identifier.
 function formatMinutes(hours, minutes) {
 	minutes = minutes.padStart(2, '0')
-	if (hours > 12) {
-		return (minutes + " PM");
-	} else {
+	if (hours < 12) {
 		return (minutes + " AM");
+	} else {
+		return (minutes + " PM");
 	}
 }
 
-// Contains phrases in first, last pairs. Both must be specified.
-// Index 0 corresponds to the top line of text, and index 1 is the bottom.
-// If index 1 is an empty string, the bottom line won't be displayed. (good for short phrases)
+// Greeting phrases
 var phrases = [
 	['Sup, dude.'],
 	['Good to see you again!'],
-	['Welcome back ' + USER_NAME + '!'],
+	['Welcome back! ' + USER_NAME + '!'],
 	['How\'s it going, ' + USER_NAME + '?'],
 	['Hello again, ' + USER_NAME + '!'],
 	['Yo, my guy.'],
@@ -70,10 +68,8 @@ var phrases = [
 	['How\'s it hanging?'],
 	['How goes it, ' + USER_NAME + '?'],
 	['Suhhh dude.'],
-	['What\'s cracking my man?'],
 	['Ello, gov\'nor!'],
 	['How you doin\'?'],
-	['What\'s cookin\', good lookin\'?'],
 	['Hello there.'],
 	['Hey boo.'],
 	['*Hat tip*'],
@@ -82,9 +78,8 @@ var phrases = [
 
 // Function for fetching the weather information and updating every minute.
 function fetchWeather(){
-	// OpenWeatherMap is the service being used for the weather data fetching. Currently, the api call is hardcoded with my (Joe Martin) API key.
+	// OpenWeatherMap is the service being used for the weather data fetching. Currently, the api call is hardcoded with my (Joe Martin) free API key.
 	// Documentation on the API call being used: https://openweathermap.org/current
-	// The first couple lines are just all the ajax call mumbo jumbo.
 	var URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + CITY_ZIPCODE + "&appid=12d853a64bb392966651a92c1935a587&units=imperial";
 		$.ajax({
 			type: "GET",
@@ -98,27 +93,32 @@ function fetchWeather(){
 				// Checks if it is day. Compares the current time to the sunrise and sunset times.
 				if (currentTime > msg.sys.sunrise && currentTime < msg.sys.sunset) {var isDay = true;}
 				else {var isDay = false;}
+				// Set temperature (in fahrenheit)
+				document.getElementById('temperature').innerHTML = Math.round(msg.main.temp) + "&#xb0;F</p>";
 				// Checks the current weather condition description from the weather object and selects which weather icon should be displayed.
-				// There are x different possible conditions: Rain, Clear, Atmosphere, Thunderstorm, Drizzle, Clouds, and Snow.
-				// Each one has its own icon except Atmosphere which uses clear because what does Atmosphere even mean???
+				// Each condition has its own icon (except for 'Atmosphere' which uses clear because what does Atmosphere even mean?)
 				// Also, if it is night/day the icons will be changed accordingly.
-				// If none of the conditions are matched, a blank image will be displayed and you should fix it.
-				if (msg.weather[0].main == "Rain") { document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Rain.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Clear" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clear.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Clear" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clear_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Atmosphere" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clear.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Atmosphere" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clear_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Thunderstorm.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Drizzle" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Drizzle.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Drizzle" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Drizzle_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Clouds" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clouds.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Clouds" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clouds_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Haze" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clouds.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Haze" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Clouds_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Mist" && isDay == true) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Drizzle.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Mist" && isDay == false) {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Drizzle_Night.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else if (msg.weather[0].main == "Snow") {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Snow.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
-				else {document.getElementById('weather').innerHTML = "<img id='weatherIcon' src='../images/newtabpage/Blank.png'><br>" + Math.round(msg.main.temp) + "&#xb0;F</tr></td>";;}
+				// If none of the conditions are matched, a blank image will be displayed.
+				if (msg.weather[0].main == "Rain") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Rain.png";;}
+				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Thunderstorm.png";;}
+				else if (isDay == true){
+					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear.png";;}
+					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear.png";;}
+					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle.png";;}
+					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
+					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
+					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle.png";;}
+					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').innerHTML = "../images/newtabpage/weather/Snow.png";;}
+				} else if (isDay == false){
+					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
+					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
+					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle_Night.png";;}
+					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
+					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
+					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle_Night.png";;}
+				} else {
+					document.getElementById('weatherIcon').innerHTML = "../images/newtabpage/weather/Blank.png";;
+				}
 			}
 		});
 	// Sets a timeout so that the function will be called and the weather updated every minute.
