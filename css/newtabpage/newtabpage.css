@@ -126,8 +126,8 @@ p {
 	}
 	#bookmarkContainer {
 		max-width: 550px !important;
-		top: 25% !important;
-		margin: 0px;
+		top: 22% !important;
+		margin: 10px;
 	}
 	.bookmarkItem {
 		flex-basis: 10% !important;
@@ -137,7 +137,7 @@ p {
 		font-size: 9vmin;
 	}
 	#hour, #colon, #minute {
-		font-size: 40px !important;
+		font-size: 40.5px !important;
 		line-height: 10px !important;
 	}
 	#date {
@@ -157,7 +157,7 @@ p {
 @media (max-width: 850px) and (orientation: portrait) {
 	#mainContainer {
 		background-image: url(../../images/newtabpage/backgrounds/image_31.jpg);
-		justify-content: initial;
+		/* justify-content: initial; */
 	}
 	#bookmarkContainer {
 		max-width: 400px;
@@ -168,10 +168,10 @@ p {
 		padding: 5px;
 	}
 	#hour, #colon, #minute {
-		font-size: 45px !important;
+		font-size: 47px !important;
 	}
 	#date {
-		font-size: 17px !important;
+		font-size: 16.5px !important;
 		line-height: 10px !important;
 	}
 	#weather {
@@ -196,7 +196,7 @@ p {
 		font-size: 60px;
 	}
 	#date {
-		font-size: 22px;
+		font-size: 22.5px;
 	}
 	#weather {
 		font-size: 35px;
@@ -217,7 +217,7 @@ p {
 		font-size: 83px !important;
 	}
 	#date {
-		font-size: 29px !important;
+		font-size: 29.5px !important;
 	}
 	#weather {
 		font-size: 40px !important;
