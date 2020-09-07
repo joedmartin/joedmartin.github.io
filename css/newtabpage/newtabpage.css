@@ -175,7 +175,7 @@ p {
 }
 
 /* Desktop - Small */
-@media (max-width: 960px) {
+@media (min-width: 801px) and (max-width: 960px) {
 	#bookmarkContainer {
 		max-width: 450px;
 		top: 25%;
