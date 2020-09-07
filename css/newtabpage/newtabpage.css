@@ -29,8 +29,8 @@ p {
 	background-position: center;
 	background-size: cover;
 	opacity: 0;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	text-align: center;
 }
 
 #greetingContainer {
@@ -119,8 +119,8 @@ p {
 		background-image: url(../../images/newtabpage/backgrounds/image_30.jpg);
 	}
 	#bookmarkContainer {
-		max-width: 600px !important;
-		top: 22% !important;
+		max-width: 550px !important;
+		top: 25% !important;
 		margin: 0px;
 	}
 	.bookmarkItem {
@@ -211,6 +211,7 @@ p {
 	}
 	#date {
 		font-size: 30px !important;
+		margin-left: 5px;
 	}
 	#weather {
 		font-size: 40px !important;
