@@ -109,10 +109,6 @@ p {
 	margin-right: 10px;
 }
 
-#date {
-	margin-left: 5px;
-}
-
 #temperature {
 	margin-bottom: 20px;
 }
@@ -125,10 +121,14 @@ p {
 	#bookmarkContainer {
 		max-width: 600px !important;
 		top: 22% !important;
+		margin: 0px;
 	}
 	.bookmarkItem {
 		flex-basis: 10% !important;
 		padding: 5px;
+	}
+	#welcomeMessage {
+		font-size: 9vmin;
 	}
 	#hour, #colon, #minute {
 		font-size: 40px !important;
