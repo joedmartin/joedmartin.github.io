@@ -69,14 +69,14 @@ p {
 	width: 100%;
 	transition: transform 0.5s, box-shadow 1s;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
-	border-radius: 80px;
+	border-radius: 90px;
 }
 
 .bookmarkImg:hover {
 	transform: scale(1.2);
 	transition: transform 0.5s, box-shadow 1s;
 	box-shadow: 0px 0px 10px black;
-	border-radius: 80px;
+	border-radius: 90px;
 }
 
 #footerContainer {
@@ -247,7 +247,7 @@ p {
 		font-size: 83px !important;
 	}
 	#date {
-		font-size: 29.5px !important;
+		font-size: 30px !important;
 	}
 	#weather {
 		font-size: 40px !important;
