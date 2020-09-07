@@ -76,7 +76,7 @@ var phrases = [
 	['How\'s life?'],
 	['How do you do?'],
 	['Howdy partner.'],
-	['G\'day mate!.']
+	['G\'day mate!']
 ];
 
 // Function for fetching the weather information and updating every minute.
