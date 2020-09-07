@@ -4,7 +4,7 @@ const CITY_ZIPCODE = "19104"; // The zipcode for which you want the have the wea
 
 // On load function, sets background image and greeting text. Animates page load with opacity and movement. Calls clock and weather functions.
 $(document).ready(function() {
-	//document.getElementById('mainContainer').style.backgroundImage  = 'url("../images/newtabpage/backgrounds/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
+	document.getElementById('mainContainer').style.backgroundImage  = 'url("../images/newtabpage/backgrounds/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
 	document.getElementById('welcomeMessage').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())]);
 	$('#greetingContainer').animate({marginTop:"10px",opacity:'1'},{queue:false,duration:800});
 	$('#mainContainer').animate({opacity:'1'},{queue:false,duration:1000});
