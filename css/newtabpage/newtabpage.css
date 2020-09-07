@@ -152,6 +152,7 @@ p {
 @media (max-width: 850px) and (orientation: portrait) {
 	#mainContainer {
 		background-image: url(../../images/newtabpage/backgrounds/image_31.jpg);
+		justify-content: initial;
 	}
 	#bookmarkContainer {
 		max-width: 400px;
