@@ -29,7 +29,7 @@ p {
 	background-position: center;
 	background-size: cover;
 	opacity: 0;
-	display: grid;
+	display: flex;
 	text-align: center;
 }
 
