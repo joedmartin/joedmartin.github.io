@@ -119,6 +119,9 @@ p {
 
 /* Mobile - Landscape */
 @media (max-width: 800px) and (orientation: landscape) {
+	#mainContainer {
+		background-image: url(../../images/newtabpage/backgrounds/image_30.jpg);
+	}
 	#bookmarkContainer {
 		max-width: 600px !important;
 		top: 22% !important;
@@ -145,6 +148,9 @@ p {
 
 /* Mobile - Portrait */
 @media (max-width: 800px) and (orientation: portrait) {
+	#mainContainer {
+		background-image: url(../../images/newtabpage/backgrounds/image_31.jpg);
+	}
 	#bookmarkContainer {
 		max-width: 400px;
 		top: 25% !important;
