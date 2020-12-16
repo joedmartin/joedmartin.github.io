@@ -113,7 +113,7 @@ function fetchWeather(){
 					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
 					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
 					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle.png";;}
-					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').innerHTML = "../images/newtabpage/weather/Snow.png";;}
+					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Snow.png";;}
 				} else if (isDay == false){
 					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
 					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
@@ -121,8 +121,9 @@ function fetchWeather(){
 					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
 					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
 					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle_Night.png";;}
+					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Snow.png";;}
 				} else {
-					document.getElementById('weatherIcon').innerHTML = "../images/newtabpage/weather/Blank.png";;
+					document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Blank.png";;
 				}
 			}
 		});
