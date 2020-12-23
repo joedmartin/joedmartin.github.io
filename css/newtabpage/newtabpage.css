@@ -124,8 +124,11 @@ p {
 
 /* Mobile Portrait */
 @media (max-width: 639px) {
+	#mainContainer {
+		justify-content: initial;
+	}
 	#bookmarkContainer {
-		max-width: 250px;
+		max-width: 200px;
 		top: 25%;
 	}
 	.bookmarkItem {
@@ -133,17 +136,17 @@ p {
 		padding: 5px;
 	}
 	#hour, #colon, #minute {
-		font-size: 38px;
+		font-size: 30px;
 	}
 	#date {
-		font-size: 15px;
+		font-size: 12px;
 	}
 	#weather {
-		font-size: 25px;
+		font-size: 20px;
 	}
 	#weatherIcon {
-		height: 65px;
-		width: 65px;
+		height: 40px;
+		width: 40px;
 	}
 }
 
@@ -178,7 +181,7 @@ p {
 /* Tablet portrait */
 @media (max-width: 1023px) and (min-width: 769px) {
 	#bookmarkContainer {
-		max-width: 500px;
+		max-width: 550px;
 		top: 25%;
 	}
 	.bookmarkItem {
@@ -186,17 +189,17 @@ p {
 		padding: 5px;
 	}
 	#hour, #colon, #minute {
-		font-size: 37px;
+		font-size: 40px;
 	}
 	#date {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	#weather {
-		font-size: 35px;
+		font-size: 30px;
 	}
 	#weatherIcon {
-		height: 70px;
-		width: 70px;
+		height: 60px;
+		width: 60px;
 	}
 }
 
