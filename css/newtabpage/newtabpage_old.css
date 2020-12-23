@@ -1,0 +1,319 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+	font-family: Montserrat !important;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(61, 61, 61);
+	margin: 0px;
+}
+
+p {
+	margin: 0px;
+}
+
+#mainContainer {
+	height: 100%;
+	width: 100%;
+	background-image: url(../../images/newtabpage/backgrounds/Blank.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+#greetingContainer {
+	width: 100%;
+	margin-top: -100px;
+	text-align: center;
+}
+
+#welcomeMessage {
+	font-size: 8vmin;
+	font-weight: 500;
+	text-shadow: 0px 0px 10px #a3a3a3c5;
+	color: rgb(255,255,255);
+}
+
+#bookmarkContainer {
+	display: flex;
+	flex-wrap: wrap;
+	top: 35%;
+	justify-content: space-around;
+	position: absolute;
+	border-radius: 20px;
+	background-color: #a0a0a049;
+	box-shadow: 0px 0px 20px #40414071;
+	padding: 10px;
+	margin: 0 20px 0 20px;
+	opacity: 0;
+}
+
+.bookmarkItem {
+	padding: 10px;
+	text-align: center;
+}
+
+.bookmarkImg {
+	width: 100%;
+	transition: transform 0.5s, box-shadow 1s;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
+	border-radius: 100px;
+}
+
+.bookmarkImg:hover {
+	transform: scale(1.2);
+	transition: transform 0.5s, box-shadow 1s;
+	box-shadow: 0px 0px 10px black;
+	border-radius: 100px;
+}
+
+#footerContainer {
+	position: fixed;
+	text-shadow: 0px 0px 5px #a3a3a3c5;
+	left: 20px;
+	right: 20px;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	bottom: 20px;
+	opacity: 0;
+}
+
+#dateTime {
+	text-align: left;
+}
+
+#hour, #colon, #minute {
+	font-size: 60px;
+	line-height: 15px;
+}
+
+#weather {
+	position: fixed;
+	bottom: 0px;
+	right: 20px;
+	text-align: center;
+}
+
+#weather:hover {
+	cursor: pointer;
+}
+
+#weatherIcon {
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+
+#temperature {
+	margin-bottom: 20px;
+}
+
+/* Mobile - Landscape */
+@media (max-width: 850px) and (orientation: landscape) {
+	#mainContainer {
+		background-image: url(../../images/newtabpage/backgrounds/image_30.jpg);
+	}
+	#bookmarkContainer {
+		max-width: 550px !important;
+		top: 22% !important;
+		margin: 10px;
+	}
+	.bookmarkItem {
+		flex-basis: 10% !important;
+		padding: 5px;
+	}
+	#welcomeMessage {
+		font-size: 9vmin;
+	}
+	#hour, #colon, #minute {
+		font-size: 40.5px !important;
+		line-height: 10px !important;
+	}
+	#date {
+		font-size: 15px !important;
+		line-height: 10px !important;
+	}
+	#weather {
+		font-size: 20px !important;
+	}
+	#weatherIcon {
+		height: 50px !important;
+		width: 50px !important;
+	}
+}
+
+/* Mobile - Portrait */
+@media (max-width: 500px) and (orientation: portrait) {
+	#mainContainer {
+		background-image: url(../../images/newtabpage/backgrounds/image_31.jpg);
+		justify-content: initial;
+	}
+	#bookmarkContainer {
+		max-width: 400px;
+		top: 25% !important;
+	}
+	.bookmarkItem {
+		flex-basis: 18%;
+		padding: 5px;
+	}
+	#hour, #colon, #minute {
+		font-size: 47px !important;
+	}
+	#date {
+		font-size: 17px !important;
+		line-height: 10px !important;
+	}
+	#weather {
+		font-size: 20px !important;
+	}
+	#weatherIcon {
+		height: 55px !important;
+		width: 55px !important;
+	}
+}
+
+
+/* Mobile - Tablet/iPad Portrait */
+@media (min-width: 700px) and (max-width: 850px) and (orientation: portrait) {
+	#mainContainer {
+		background-image: url(../../images/newtabpage/backgrounds/image_31.jpg);
+	}
+	#bookmarkContainer {
+		max-width: 400px;
+		top: 25% !important;
+	}
+	.bookmarkItem {
+		flex-basis: 18%;
+		padding: 5px;
+	}
+	#hour, #colon, #minute {
+		font-size: 70px !important;
+	}
+	#date {
+		font-size: 25px !important;
+		line-height: 30px !important;
+	}
+	#weather {
+		font-size: 30px !important;
+	}
+	#weatherIcon {
+		height: 65px !important;
+		width: 65px !important;
+	}
+}
+
+/* Desktop - Small */
+@media (min-width: 851px) and (max-width: 960px) {
+	#bookmarkContainer {
+		max-width: 450px;
+		top: 25%;
+	}
+	.bookmarkItem {
+		flex-basis: 16%;
+	}
+	#hour, #colon, #minute {
+		font-size: 60px;
+	}
+	#date {
+		font-size: 22.5px;
+	}
+	#weather {
+		font-size: 35px;
+	}
+	#weatherIcon {
+		height: 80px;
+		width: 80px;
+	}
+}
+
+/* Desktop - 1080p */
+@media (min-width: 961px) and (max-width: 1920px) {
+	#bookmarkContainer {
+		max-width: 900px;
+		top: 40% !important;
+	}
+	#hour, #colon, #minute {
+		font-size: 83px !important;
+	}
+	#date {
+		font-size: 30px !important;
+	}
+	#weather {
+		font-size: 40px !important;
+	}
+	#weatherIcon {
+		height: 100px !important;
+		width: 100px !important;
+	}
+	.bookmarkItem {
+		flex-basis: 10% !important;
+	}
+}
+
+/* Desktop - 1440p */
+@media (min-width: 1921px) and (max-width: 2560px) {
+	#bookmarkContainer {
+		max-width: 1200px;
+		top: 40% !important;
+	}
+	#hour, #colon, #minute {
+		font-size: 112px !important;
+	}
+	#date {
+		font-size: 40px !important;
+	}
+	#weather {
+		font-size: 55px !important;
+	}
+	#weatherIcon {
+		height: 145px !important;
+		width: 145px !important;
+	}
+	.bookmarkItem {
+		flex-basis: 10% !important;
+	}
+}
+
+/* Desktop - 2560p */
+@media (min-width: 2561px) {
+	#bookmarkContainer {
+		max-width: 1800px;
+		top: 40% !important;
+	}
+	#hour, #colon, #minute {
+		font-size: 170px !important;
+	}
+	#date {
+		font-size: 60px !important;
+	}
+	#weather {
+		font-size: 80px !important;
+	}
+	#weatherIcon {
+		height: 200px !important;
+		width: 200px !important;
+	}
+	.bookmarkItem {
+		flex-basis: 11% !important;
+	}
+}
+
+/* Other */
+@media (min-width: 961px) {
+	.bookmarkItem {
+		flex-basis: 12.5%;
+	}
+}
