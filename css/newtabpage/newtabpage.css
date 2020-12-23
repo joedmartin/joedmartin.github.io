@@ -161,10 +161,10 @@ p {
 		font-size: 9vmin;
 	}
 	#hour, #colon, #minute {
-		font-size: 30px;
+		font-size: 25px;
 	}
 	#date {
-		font-size: 10px;
+		font-size: 8px;
 	}
 	#weather {
 		font-size: 18px;
