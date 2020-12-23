@@ -26,6 +26,7 @@ p {
 	opacity: 0;
 	display: flex;
 	justify-content: center;
+	text-align: center;
 }
 
 #greetingContainer {
@@ -132,7 +133,7 @@ p {
 		padding: 5px;
 	}
 	#hour, #colon, #minute {
-		font-size: 45px;
+		font-size: 38px;
 	}
 	#date {
 		font-size: 15px;
@@ -177,24 +178,25 @@ p {
 /* Tablet portrait */
 @media (max-width: 1023px) and (min-width: 769px) {
 	#bookmarkContainer {
-		max-width: 350px;
+		max-width: 500px;
 		top: 25%;
 	}
 	.bookmarkItem {
-		flex-basis: 18%;
+		flex-basis: 10%;
+		padding: 5px;
 	}
 	#hour, #colon, #minute {
-		font-size: 65px;
+		font-size: 37px;
 	}
 	#date {
-		font-size: 20px;
+		font-size: 15px;
 	}
 	#weather {
-		font-size: 42px;
+		font-size: 35px;
 	}
 	#weatherIcon {
-		height: 80px;
-		width: 80px;
+		height: 70px;
+		width: 70px;
 	}
 }
 
