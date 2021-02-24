@@ -3,10 +3,10 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Joseph Martin</title>
-        <link rel="stylesheet" href="css/portfolio/portfolio.css">
-        <link rel="stylesheet" href="css/portfolio/navbar.css">
+		<link rel="stylesheet" href="css/portfolio/portfolio.css">
+		<link rel="stylesheet" href="css/portfolio/navbar.css">
 		<link rel="icon" href="images/portfolio/portfolio_favicon.ico" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/portfolio/navbar.js"></script>
 		<script type="text/javascript" src="js/portfolio/portfolio.js"></script>
 	</head>
@@ -17,24 +17,28 @@
 					<p id="myName">JOSEPH<br>MARTIN</p>
 				</div>
 				<div id="navBarMain">
-					<a class="navBarLink" href="#">HOME</a><br>
-            		<a class="navBarLink" href="#">ABOUT</a><br>
-            		<a class="navBarLink" href="#">WORK</a><br>
-					<a class="navBarLink" href="#">CONTACT</a><br>
-				</div>
-				<div id="navBarFooter">
+					<a class="navBarLink" href="#" onclick="navControl()">HOME</a><br>
+					<a href="./files/JosephMartinResume.pdf" target="_blank" class="navBarLink">RESUME</a><br>
 					<a href="https://www.linkedin.com/in/jdm" target="_blank" class="navBarLink">LINKEDIN</a><br>
 					<a href="https://github.com/joedmartin" target="_blank" class="navBarLink">GITHUB</a><br>
+				</div>
+				<div id="navBarFooter">
 				</div>
 			</div>
 		</div>
 		<div id="menuButtonContainer" onclick="navControl()">
 			<p id="menuButton">&#9776</p>
 		</div>
-		<div id="main">
-			<div id="mainHeader">
-				<!--<img style="width:100%;" src="images/me1_bw.jpg">-->
-				<p id="mainHeaderName">JOSEPH MARTIN</p>
+		<div id="mainContainer">
+			<div id="headerSection">
+				<p id="headerName">JOSEPH MARTIN</p>
+			</div>
+			<div id="resumeSection">
+				<div id="resumeContent">
+					<a href="https://github.com/joedmartin" target="_blank" class="navBarLink homeLink">GITHUB</a>
+					<a href="./files/JosephMartinResume.pdf" target="_blank" class="navBarLink homeLink">RESUME</a>
+					<a href="https://www.linkedin.com/in/jdm" target="_blank" class="navBarLink homeLink">LINKEDIN</a>
+				</div>
 			</div>
 		</div>
 	</body>
