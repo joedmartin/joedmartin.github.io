@@ -58,17 +58,15 @@ function formatMinutes(hours, minutes) {
 
 // Greeting phrases
 var phrases = [
-	['Sup, dude.'],
+	['Suppp'],
 	['Good to see you again!'],
 	['Welcome back! ' + USER_NAME + '!'],
 	['How\'s it going, ' + USER_NAME + '?'],
 	['Hello again, ' + USER_NAME + '!'],
 	['Yo, my guy.'],
 	['Hi, ' + USER_NAME + '!'],
-	['How\'s it hanging?'],
 	['How goes it, ' + USER_NAME + '?'],
-	['Suhhh dude.'],
-	['Ello, gov\'nor!'],
+	['Suhhh dude?'],
 	['How you doin\'?'],
 	['Hello there.'],
 	['Hey boo.'],
