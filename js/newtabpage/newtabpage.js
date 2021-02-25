@@ -70,12 +70,16 @@ var phrases = [
 	['How you doin\'?'],
 	['Hello there.'],
 	['Hey boo.'],
+	['What’s cookin’?'],
 	['*Hat tip*'],
 	['Good day sir.'],
 	['What\'s new?'],
 	['How\'s life?'],
 	['How do you do?'],
 	['Howdy partner.'],
+	['What\'s the haps?'],
+	['How have ya been?'],
+	['Nice to see you!'],
 	['G\'day mate!']
 ];
 
