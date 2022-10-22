@@ -20,7 +20,7 @@ p {
 #mainContainer {
 	height: 100%;
 	width: 100%;
-	background-image: url(../../images/newtabpage/backgrounds/Blank.png);
+	background-image: url(../images/backgrounds/Blank.png);
 	background-position: center;
 	background-size: cover;
 	opacity: 0;

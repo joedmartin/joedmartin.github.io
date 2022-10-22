@@ -1,10 +1,10 @@
 const NUM_PICTURES = 45; // The number of background images
 const USER_NAME = "Joe"; // The name you want displayed.
-const CITY_ZIPCODE = "19104"; // The zipcode for which you want the have the weather displayed.
+const CITY_ZIPCODE = "19147"; // The zipcode for which you want the have the weather displayed.
 
 // On load function, sets background image and greeting text. Animates page load with opacity and movement. Calls clock and weather functions.
 $(document).ready(function() {
-	document.getElementById('mainContainer').style.backgroundImage  = 'url("../images/newtabpage/backgrounds/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
+	document.getElementById('mainContainer').style.backgroundImage  = 'url("./images/backgrounds/image_' + Math.floor((NUM_PICTURES + 1) * Math.random()) + '.jpg';
 	document.getElementById('welcomeMessage').innerHTML = String(phrases[Math.floor(phrases.length * Math.random())]);
 	$('#greetingContainer').animate({opacity:'1'},{queue:false,duration:800});
 	$('#mainContainer').animate({opacity:'1'},{queue:false,duration:1000});
@@ -95,7 +95,7 @@ function fetchWeather(){
 			success : function(msg){
 				// Create a new date object.
 				var dateOne = new Date();
-				// Create a new variable to store the current time with the 3 last digits cut off cause idk what they do...but it works.
+				// Create a new variable to store the current time with the 3 last digits cut off cause idk what they do..but it works.
 				var currentTime = parseInt(((dateOne.getTime()).toString()).slice(0, -3))
 				// Checks if it is day. Compares the current time to the sunrise and sunset times.
 				if (currentTime > msg.sys.sunrise && currentTime < msg.sys.sunset) {var isDay = true;}
@@ -106,26 +106,26 @@ function fetchWeather(){
 				// Each condition has its own icon (except for 'Atmosphere' which uses clear because what does Atmosphere even mean?)
 				// Also, if it is night/day the icons will be changed accordingly.
 				// If none of the conditions are matched, a blank image will be displayed.
-				if (msg.weather[0].main == "Rain") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Rain.png";;}
-				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Thunderstorm.png";;}
+				if (msg.weather[0].main == "Rain") {document.getElementById('weatherIcon').src = "./images/weather/Rain.png";;}
+				else if (msg.weather[0].main == "Thunderstorm") {document.getElementById('weatherIcon').src = "./images/weather/Thunderstorm.png";;}
 				else if (isDay == true){
-					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear.png";;}
-					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear.png";;}
-					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle.png";;}
-					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
-					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds.png";;}
-					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle.png";;}
-					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Snow.png";;}
+					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "./images/weather/Clear.png";;}
+					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "./images/weather/Clear.png";;}
+					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "./images/weather/Drizzle.png";;}
+					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "./images/weather/Clouds.png";;}
+					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "./images/weather/Clouds.png";;}
+					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "./images/weather/Drizzle.png";;}
+					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "./images/weather/Snow.png";;}
 				} else if (isDay == false){
-					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
-					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clear_Night.png";;}
-					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle_Night.png";;}
-					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
-					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Clouds_Night.png";;}
-					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Drizzle_Night.png";;}
-					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Snow.png";;}
+					if (msg.weather[0].main == "Clear") {document.getElementById('weatherIcon').src = "./images/weather/Clear_Night.png";;}
+					else if (msg.weather[0].main == "Atmosphere") {document.getElementById('weatherIcon').src = "./images/weather/Clear_Night.png";;}
+					else if (msg.weather[0].main == "Drizzle") {document.getElementById('weatherIcon').src = "./images/weather/Drizzle_Night.png";;}
+					else if (msg.weather[0].main == "Clouds") {document.getElementById('weatherIcon').src = "./images/weather/Clouds_Night.png";;}
+					else if (msg.weather[0].main == "Haze") {document.getElementById('weatherIcon').src = "./images/weather/Clouds_Night.png";;}
+					else if (msg.weather[0].main == "Mist") {document.getElementById('weatherIcon').src = "./images/weather/Drizzle_Night.png";;}
+					else if (msg.weather[0].main == "Snow") {document.getElementById('weatherIcon').src = "./images/weather/Snow.png";;}
 				} else {
-					document.getElementById('weatherIcon').src = "../images/newtabpage/weather/Blank.png";;
+					document.getElementById('weatherIcon').src = "./images/weather/Blank.png";;
 				}
 			}
 		});

@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Joseph Martin</title>
-		<link rel="stylesheet" href="css/portfolio/portfolio.css">
-		<link rel="stylesheet" href="css/portfolio/navbar.css">
-		<link rel="icon" href="images/portfolio/portfolio_favicon.ico" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/portfolio/navbar.js"></script>
-		<script type="text/javascript" src="js/portfolio/portfolio.js"></script>
-	</head>
-	<body>
-		<div id="navBar" style="width:0px;">
-			<div id="navBarContainer" style="opacity:0;">
-				<div id="navBarHeader">
-					<p id="myName">JOSEPH<br>MARTIN</p>
-				</div>
-				<div id="navBarMain">
-					<a class="navBarLink" href="#" onclick="navControl()">HOME</a><br>
-					<a href="./files/JosephMartinResume.pdf" target="_blank" class="navBarLink">RESUME</a><br>
-					<a href="https://www.linkedin.com/in/jdm" target="_blank" class="navBarLink">LINKEDIN</a><br>
-					<a href="https://github.com/joedmartin" target="_blank" class="navBarLink">GITHUB</a><br>
-				</div>
-				<div id="navBarFooter">
-				</div>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Tab</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/newtab_favicon_16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/newtab_favicon_32x32.png">
+	<link rel="icon" type="image/png" sizes="180x180" href="./images/favicon/newtab_iOSHomeScreen_180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/newtab_AndroidHomeScreen_192x192.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/newtab_AndroidSplashScreen_512x512.png">
+	<link rel="stylesheet" href="./css/newtabpage.css">
+</head>
+<body>
+	<div id="mainContainer">
+		<div id="greetingContainer">
+			<p id="welcomeMessage"></p>
+		</div>
+		<div id="bookmarkContainer">
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://mail.google.com/mail/u/0/?tab=wm#inbox"><img class="bookmarkImg" src="./images/icons/logo_gmail.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://drive.google.com/drive/?tab=wo"><img class="bookmarkImg" src="./images/icons/logo_googledrive.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://photos.google.com/"><img class="bookmarkImg" src="./images/icons/logo_googlephotos.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://calendar.google.com/calendar/r?tab=oc"><img class="bookmarkImg" src="./images/icons/logo_calendar.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.audible.com/library/titles"><img class="bookmarkImg" src="./images/icons/logo_audible.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://discordapp.com/activity"><img class="bookmarkImg" src="./images/icons/logo_discord.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.youtube.com/"><img class="bookmarkImg" src="./images/icons/logo_youtube.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://open.spotify.com/collection/playlists"><img class="bookmarkImg" src="./images/icons/logo_spotify.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.netflix.com/browse"><img class="bookmarkImg" src="./images/icons/logo_netflix.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.hulu.com/"><img class="bookmarkImg" src="./images/icons/logo_hulu.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="http://app.plex.tv/web/app"><img class="bookmarkImg" src="./images/icons/logo_plex.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://jgrealestate.appfolio.com/connect/users/sign_in"><img class="bookmarkImg" src="./images/icons/logo_appfolio.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://outlook.office.com/owa/"><img class="bookmarkImg" src="./images/icons/logo_outlook.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.reddit.com/"><img class="bookmarkImg" src="./images/icons/logo_reddit.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.pnc.com/en/personal-banking/banking/checking.html"><img class="bookmarkImg" src="./images/icons/logo_pnc.png"></a></div>
+			<div class="bookmarkItem"><a class="bookmarkLink" href="https://www.discover.com/"><img class="bookmarkImg" src="./images/icons/logo_discover.png"></a></div>
+		</div>
+		<div id="footerContainer">
+			<div id="dateTime">
+				<span id="hour"></span>
+				<span id="colon">:</span>
+				<span id="minute"></span>
+				<br>
+				<span id="date"></span>
+			</div>
+			<div id="weather" onclick="location.href=&#39;https://weather.com/weather/today/l/USPA1276:1:US&#39;;">
+				<img id="weatherIcon" src="./images/backgrounds/Blank.png">
+				<p id="temperature"></p>
 			</div>
 		</div>
-		<div id="menuButtonContainer" onclick="navControl()">
-			<p id="menuButton">&#9776</p>
-		</div>
-		<div id="mainContainer">
-			<div id="headerSection">
-				<p id="headerName">JOSEPH MARTIN</p>
-			</div>
-		</div>
-	</body>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/newtabpage.js"></script>
+</body>
 </html>
