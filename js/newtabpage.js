@@ -1,6 +1,6 @@
 const NUM_PICTURES = 45; // The number of background images
 const USER_NAME = "Joe"; // The name you want displayed.
-const CITY_ZIPCODE = "19147"; // The zipcode for which you want the have the weather displayed.
+const CITY_ZIPCODE = "19148"; // The zipcode for which you want the have the weather displayed.
 
 // On load function, sets background image and greeting text. Animates page load with opacity and movement. Calls clock and weather functions.
 $(document).ready(function() {
